@@ -33,3 +33,12 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+
+*.jpg
+*.mp4
+
+/public/Images
+
+next.svg
+vercel.svg

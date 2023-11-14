@@ -2,26 +2,54 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+@font-face {
+    font-family: FuturaNowHeadlineExtraBold;
+    src: url('../public/Fonts/FuturaNowHeadlineExtraBold.ttf');
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+@font-face {
+    font-family: FuturaNowHeadlineExtraBlack;
+    src: url('../public/Fonts/FuturaNowHeadlineExtraBlack.ttf');
 }
 
+@font-face {
+    font-family: Futura;
+    src: url('../public/Fonts/Futura-Bold.ttf');
+}
+
+@font-face {
+    font-family: HelveticaBold;
+    src: url('../public/Fonts/HelveticaNowText-Bold.ttf');
+}
+
+@font-face {
+    font-family: HelveticaMedium;
+    src: url('../public/Fonts/HelveticaNowText-Medium.ttf');
+}
+
+@font-face {
+    font-family: HelveticaLight;
+    src: url('../public/Fonts/HelveticaNowText-Light.ttf');
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+    height: 100%;
+    width: 100%;
+    background: #0E1111;
+    overflow-x: hidden;
+}
+
+.header-con {
+    position: absolute;
+}
+
+.header {
+    width: 100vw;
 }

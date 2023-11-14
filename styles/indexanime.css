@@ -1,0 +1,34 @@
+/* .index__popular-img {
+
+    grid-auto-columns: 10vw;
+} */
+
+.index-anime-content {
+    overflow-x: auto;
+    overflow-y: hidden;
+    height: 40vh;
+    /* background: #fff; */
+    grid-auto-flow: column;
+    grid-auto-columns: 15vw;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+}
+
+.index-anime-content> * {
+    scroll-snap-align: start;
+}
+
+/* .index-popular-container {
+    background: #fff;
+} */
+
+/* .index-anime-content::-webkit-scrollbar {
+    width: 0;
+} */
+
+.index-anime-main {
+    /* background: green; */
+    padding: 0 2rem;
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+}
