@@ -13,9 +13,14 @@ const Indexairing = () => {
           numItems={10}
           styleClassName='index-anime-content'
           styleClass="grid py-2"
-          linkWH='w-40 h-52'
+          linkClassName='link-container'
+          linkWH='w-44 h-56'
           styleRounded='rounded'
           styleMargin=''
+          btnClassname ='flex items-center justify-center'
+          viewMoreClassname='viewmore flex items-center justify-center text-white flex-col'
+          viewMoreSVGWH = '22'
+          viewmorePage='Airing'
         />
       </div>
     </div>

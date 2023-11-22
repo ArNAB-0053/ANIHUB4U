@@ -47,9 +47,45 @@ body {
 }
 
 .header-con {
-    position: absolute;
+    position: fixed;
+    width: calc(100vw - 0.7rem);
+    z-index: 999999;
+}
+
+.header-con.fixed {
+    background: rgba(0, 0, 0, 0.4);
+    -webkit-backdrop-filter: blur(14px);
+    backdrop-filter: blur(14px);
+    z-index: 999999;
 }
 
 .header {
-    width: 100vw;
+    width: 100%;
+}
+
+
+body {
+    --sb-track-color: none;
+    --sb-thumb-color: #d3d3d3;
+    --sb-size: 0.7rem;
+
+    scrollbar-color: var(--sb-thumb-color) var(--sb-track-color);
+}
+
+body::-webkit-scrollbar {
+    width: var(--sb-size)
+}
+
+body::-webkit-scrollbar-track {
+    background: var(--sb-track-color);
+    border-radius: 5rem;
+    z-index: 999;
+    margin-top: 0.2rem;
+    margin-bottom: 0.2rem;
+}
+
+body::-webkit-scrollbar-thumb {
+    background: var(--sb-thumb-color);
+    border-radius: 5rem;
+    z-index: 999;
 }

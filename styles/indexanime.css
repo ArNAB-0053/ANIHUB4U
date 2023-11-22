@@ -4,31 +4,71 @@
 } */
 
 .index-anime-content {
-    overflow-x: auto;
+    overflow-x: hidden;
     overflow-y: hidden;
-    height: 40vh;
+    height: 44vh;
     /* background: #fff; */
     grid-auto-flow: column;
     grid-auto-columns: 15vw;
     scroll-snap-type: x mandatory;
     scroll-behavior: smooth;
+    justify-content: start;
+    align-content: start;
 }
 
-.index-anime-content> * {
+.index-anime-content>* {
     scroll-snap-align: start;
 }
 
-/* .index-popular-container {
-    background: #fff;
-} */
-
-/* .index-anime-content::-webkit-scrollbar {
-    width: 0;
-} */
+.index-anime-container {
+    position: relative;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
 
 .index-anime-main {
     /* background: green; */
     padding: 0 2rem;
     margin-top: 4rem;
     margin-bottom: 4rem;
+}
+
+.index-anime-container>button {
+    background: rgba(255, 255, 255, 0.3);
+    -webkit-backdrop-filter: blur(6px);
+    backdrop-filter: blur(6px);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    width: 2rem;
+    height: 25%;
+    position: absolute;
+    top: 30%;
+    border-radius: 2rem;
+    padding: 0.2rem;
+}
+
+.scroll-left{
+    transform: rotate(180deg);
+    left: 0;
+}
+
+.scroll-right{
+    left: 98%;
+}
+
+#nxtimg, #previmg {
+    filter: invert(100%) grayscale(100%);
+    width: 5rem;
+}
+
+.viewmore {
+    background: #2d2d2d;
+    height: 25%;
+    position: relative;
+    top: 40%;
+    margin-right: 1.5rem;
+    border-radius: 5rem;
+}
+
+.viewmore>svg {
+    width: 15rem;
 }
