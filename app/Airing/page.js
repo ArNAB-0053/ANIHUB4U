@@ -5,7 +5,9 @@ const page = () => {
   return (
     <div>
       <div className='pt-12'>
-        <Body baseURL="https://api.jikan.moe/v4" endpoint="top/anime" />
+        <Body
+          baseURL="https://api.jikan.moe/v4"
+          endpoint="top/anime?filter=airing" />
       </div>
     </div>
   )

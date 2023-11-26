@@ -6,7 +6,7 @@ const Indexairing = () => {
   return (
     <div className='index-anime-main'>
       <div className='index-anime-container '>
-        <h1 className='text-white '>Airing Animes</h1>
+        <h1 className=''>Airing Animes</h1>
         <Body
           baseURL="https://api.jikan.moe/v4"
           endpoint="top/anime"

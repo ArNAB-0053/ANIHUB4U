@@ -43,7 +43,7 @@ const page = ({ params }) => {
     return (
         <div>
             <div className="mainContainer p-10 flex flex-col items-center justify-center min-h-screen text-white">
-                <h1 className="titleHead">{title}</h1>
+                <h1 className="titleHead text-black dark:text-white">{title}</h1>
 
                 <div className="animeDetails rounded-xl flex items-center justify-center flex-col px-10 py-8">
                     <div className="container flex items-start justify-between">
@@ -99,7 +99,7 @@ const page = ({ params }) => {
                 </div>
 
                 <div className="trailer">
-                    <h3 className="title mt-8">Trailer</h3>
+                    <h3 className="title mt-8  text-black dark:text-white">Trailer</h3>
                     <div className="trailer-con flex place-content-center">
                         {trailer?.embed_url ?
                             <iframe
@@ -116,7 +116,7 @@ const page = ({ params }) => {
                 </div>
 
                 <div className="characterContainer mt-20">
-                    <h1 className="title">Characters</h1>
+                    <h1 className="title  text-black dark:text-white">Characters</h1>
                     <div className="characters h-full grid grid-rows-10 grid-cols-10 gap-y-20">
                         {characters?.map((character, index) => {
                             const { role } = character
@@ -124,8 +124,8 @@ const page = ({ params }) => {
                             return <Link className='w-24 h-48 place-self-center rounded-xl' href={`/character/${mal_id}`} key={index}>
                                 <div className="character">
                                     <img className="h-36 w-24" src={images?.jpg.image_url} alt="" />
-                                    <h4 className="char-name">{name}</h4>
-                                    <p className="char-role">({role})</p>
+                                    <h4 className="char-name  text-black dark:text-white">{name}</h4>
+                                    <p className="char-role text-green-700">({role})</p>
                                 </div>
                             </Link>
                         })}

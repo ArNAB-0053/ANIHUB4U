@@ -4,6 +4,7 @@ import axios from 'axios';
 import Link from 'next/link';
 import '../styles/indexanime.css'
 import Image from 'next/image'
+import { ThemeProvider } from 'next-themes'
 
 const Body = ({
     baseURL,
@@ -15,7 +16,7 @@ const Body = ({
     linkWH = "w-64 h-96",
     styleRounded = "rounded-xl",
     styleMargin = "",
-    titleClass = "text-white text-center",
+    titleClass = "text-center",
     btnClassname = 'hidden',
     viewMoreClassname = 'hidden',
     viewmorePage = '',
@@ -69,7 +70,7 @@ const Body = ({
 
     // Scrolling 
     const scrollRef = useRef(null); // useRef is used to target scroll bar
-    
+
     const handleScrollLeft = () => {
         if (scrollRef.current) {
             scrollRef.current.scrollLeft -= 200;
@@ -82,7 +83,7 @@ const Body = ({
     };
 
     return (
-        <>
+        <ThemeProvider attribute="class">
             {/* Render data when anime length is greater than 0 means when data is fetched then only show view more option */}
             {anime.length > 0 && (
                 <div className={`${styleClassName} ${styleClass}`} ref={scrollRef}>
@@ -93,7 +94,7 @@ const Body = ({
                                 src={anime.images.jpg.large_image_url} alt=""
                                 className={`object-cover block w-full h-full ${styleRounded} `}
                             />
-                            <h1 className={`${titleClass}`}>{anime.title}</h1>
+                            <h1 className={`text-black dark:text-white text-sm tracking-normal leading-4 text-center font-bold mt-2 ${titleClass}`}>{anime.title}</h1>
                         </Link>
                     })}
 
@@ -106,7 +107,7 @@ const Body = ({
                 </div>
             )}
 
-            <button className={`scroll-right ${btnClassname}`} id='scrollleft' onClick={handleScrollRight}>
+            <button className={`scroll-right dark:bg-[#ffffff4d] ${btnClassname}`} id='scrollleft' onClick={handleScrollRight}>
                 <Image
                     src='/Images/nextArrow.svg'
                     width="1920"
@@ -116,7 +117,7 @@ const Body = ({
                 </Image>
             </button>
 
-            <button className={`scroll-left ${btnClassname}`} id='prevbtn' onClick={handleScrollLeft}>
+            <button className={`scroll-left dark:bg-[#ffffff4d] ${btnClassname}`} id='prevbtn' onClick={handleScrollLeft}>
                 <Image
                     src='/Images/nextArrow.svg'
                     width="1920"
@@ -125,7 +126,7 @@ const Body = ({
                     className='prevArrow'>
                 </Image>
             </button>
-        </>
+        </ThemeProvider>
     );
 };
 

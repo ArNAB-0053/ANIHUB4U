@@ -6,7 +6,7 @@
 .index-anime-content {
     overflow-x: hidden;
     overflow-y: hidden;
-    height: 44vh;
+    height: 43vh;
     /* background: #fff; */
     grid-auto-flow: column;
     grid-auto-columns: 15vw;
@@ -29,15 +29,13 @@
 .index-anime-main {
     /* background: green; */
     padding: 0 2rem;
-    margin-top: 4rem;
-    margin-bottom: 4rem;
 }
 
 .index-anime-container>button {
-    background: rgba(255, 255, 255, 0.3);
+    background: #0000004d;
     -webkit-backdrop-filter: blur(6px);
     backdrop-filter: blur(6px);
-    border: 1px solid rgba(255, 255, 255, 0.15);
+    /* border: 1px solid rgba(255, 255, 255, 0.15); */
     width: 2rem;
     height: 25%;
     position: absolute;
@@ -72,3 +70,5 @@
 .viewmore>svg {
     width: 15rem;
 }
+
+

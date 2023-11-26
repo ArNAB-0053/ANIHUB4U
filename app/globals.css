@@ -42,18 +42,19 @@ html,
 body {
     height: 100%;
     width: 100%;
-    background: #0E1111;
+    background: var(--background);
     overflow-x: hidden;
 }
 
 .header-con {
     position: fixed;
-    width: calc(100vw - 0.7rem);
+    width: calc(100vw - 0.6rem);
     z-index: 999999;
+    height: 4.6rem;
 }
 
 .header-con.fixed {
-    background: rgba(0, 0, 0, 0.4);
+    background: rgba(255, 255, 255, 0.4);
     -webkit-backdrop-filter: blur(14px);
     backdrop-filter: blur(14px);
     z-index: 999999;
@@ -61,13 +62,17 @@ body {
 
 .header {
     width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 4.5rem;
 }
 
 
 body {
     --sb-track-color: none;
-    --sb-thumb-color: #d3d3d3;
-    --sb-size: 0.7rem;
+    --sb-thumb-color: rgb(104, 104, 104);
+    --sb-size: 0.6rem;
 
     scrollbar-color: var(--sb-thumb-color) var(--sb-track-color);
 }
@@ -88,4 +93,76 @@ body::-webkit-scrollbar-thumb {
     background: var(--sb-thumb-color);
     border-radius: 5rem;
     z-index: 999;
+}
+
+#logoImg {
+    width: 7.5rem;
+    height: 3rem;
+}
+
+.scrollbar-container {
+    background: #2020209d;
+    -webkit-backdrop-filter: blur(3px);
+    backdrop-filter: blur(3px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 0.3rem 0.8rem;
+    width: 20rem;
+    border-radius: 5rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.scrollbar-container input {
+    width: 100%;
+    background: none;
+    border: none;
+    outline: none;
+}
+
+.scrollbar-container button {
+    margin-right: 1rem;
+}
+
+.searchbarinput:focus {
+    background: none;
+    border: none;
+    outline: none;
+}
+
+.searchbarinput::placeholder {
+    font-size: 0.87rem;
+}
+
+.anime-container {
+    /* width: 28rem; */
+    padding: 0 6rem;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 2rem;
+}
+
+#profileImg {
+    width: 2.4rem;
+    height: 2.4rem;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+#drawerImg {
+    width: 1.3rem;
+    height: 1.3rem;
+    /* filter: invert(100%) grayscale(100%); */
+}
+
+.mode {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: -5rem;
+}
+
+.mode button svg {
+    width: 1.5rem;
+    height: 1.5rem;
 }

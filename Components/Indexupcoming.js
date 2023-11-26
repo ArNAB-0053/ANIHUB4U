@@ -6,7 +6,7 @@ const Indexupcoming = () => {
   return (
     <div className='index-anime-main'>
       <div className='index-anime-container '>
-        <h1 className='text-white '>Upcoming Animes</h1>
+        <h1 className=' '>Upcoming Animes</h1>
         <Body
           baseURL="https://api.jikan.moe/v4"
           endpoint="seasons/upcoming"

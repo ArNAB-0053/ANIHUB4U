@@ -120,7 +120,7 @@ const Indextext = () => {
 
   return (
     <div className='ani-con'>
-      <div className='animeHome' ref={containerRef} id='animeHome'>
+      <div className='animeHome mb-8' ref={containerRef} id='animeHome'>
         {/* Naruto */}
         <div className='animeItem flex items-center justify-between' id='naruto'>
           <div className="texts text-white z-10 px-8 pt-40">

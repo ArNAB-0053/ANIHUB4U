@@ -7,7 +7,7 @@ const Indexpopular = () => {
     return (
     <div className='index-anime-main'>
       <div className='index-anime-container'>
-        <h1 className='text-white '>Popular Animes</h1>
+        <h1 className=''>Popular Animes</h1>
         <Body
           baseURL="https://api.jikan.moe/v4"
           endpoint="top/anime?filter=bypopularity"
