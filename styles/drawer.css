@@ -1,0 +1,59 @@
+.drawer-container {
+    position: relative;
+}
+
+.drawer-content {
+    position: absolute;
+    left: -36rem;
+    top: 0;
+    background: #ffffff85;
+    -webkit-backdrop-filter: blur(9px);
+    backdrop-filter: blur(9px);
+    width: 20vw;
+    height: 104vh;
+    padding: 1rem 2rem;
+    transition: all 0.5s ease;
+    display: flex;
+    flex-direction: column;
+    z-index: 999;
+    cursor: pointer;
+}
+
+.drawer-content.opened {
+    left: 0;
+}
+
+.closebtn {
+    width: 15vh;
+    border-radius: 5rem;
+}
+
+.add-blur {
+    width: 600vw;
+    height: 600vh;
+    background: #d2d2d269;
+    -webkit-backdrop-filter: blur(26px);
+    backdrop-filter: blur(26px);
+    border: 1px solid rgba(0, 0, 0, 0.325);
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: none;
+    z-index: 99;
+    transition: all 3s ease-in-out;
+}
+
+.add-blur.blured {
+    display: flex;
+    background: #d2d2d269;
+}
+
+.line {
+    width: 20vw;
+    height: 0.02rem;
+    background: #4b4b4b8f;
+    position: relative;
+    left: -2rem;
+    margin-top: 0.7rem;
+    margin-bottom: 0.7rem;
+}

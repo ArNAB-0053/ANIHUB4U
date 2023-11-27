@@ -3,6 +3,7 @@ import React, { useEffect, useRef, useState } from 'react';
 import axios from 'axios';
 import Link from 'next/link';
 import '../styles/indexanime.css'
+import '../styles/viewmoreani.css'
 import Image from 'next/image'
 import { ThemeProvider } from 'next-themes'
 
@@ -92,17 +93,20 @@ const Body = ({
                             <img
                                 key={i}
                                 src={anime.images.jpg.large_image_url} alt=""
-                                className={`object-cover block w-full h-full ${styleRounded} `}
+                                className={`object-cover block w-full h-full scale-90 hover:scale-100 ${styleRounded} `}
+                                id='animeimg'
                             />
                             <h1 className={`text-black dark:text-white text-sm tracking-normal leading-4 text-center font-bold mt-2 ${titleClass}`}>{anime.title}</h1>
                         </Link>
                     })}
 
-                    <Link className={`${viewMoreClassname}`} href={`/${viewmorePage}`}>
-                        <h1>View more</h1>
-                        <svg xmlns="http://www.w3.org/2000/svg" width={`${viewMoreSVGWH}`} height={`${viewMoreSVGWH}`} fill="currentColor" class="bi bi-arrow-return-right" viewBox="0 0 16 16">
-                            <path fill-rule="evenodd" d="M1.5 1.5A.5.5 0 0 0 1 2v4.8a2.5 2.5 0 0 0 2.5 2.5h9.793l-3.347 3.346a.5.5 0 0 0 .708.708l4.2-4.2a.5.5 0 0 0 0-.708l-4-4a.5.5 0 0 0-.708.708L13.293 8.3H3.5A1.5 1.5 0 0 1 2 6.8V2a.5.5 0 0 0-.5-.5" />
-                        </svg>
+                    <Link className={`bg-zinc-300 dark:bg-slate-200 ${viewMoreClassname}`} href={`/${viewmorePage}`}>
+                        <button class="learn-more">
+                            <span class="circle bg-[#282936] dark:bg-[#5b65db]" aria-hidden="true">
+                                <span class="icon arrow"></span>
+                            </span>
+                            <span class="button-text">View More</span>
+                        </button>
                     </Link>
                 </div>
             )}

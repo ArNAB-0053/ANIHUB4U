@@ -18,6 +18,7 @@ import './globals.css'
 import { Inter } from 'next/font/google'
 import Header from '@/Components/Header'
 import NextTopLoader from 'nextjs-toploader';
+import Footer from '@/Components/Footer';
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -29,10 +30,11 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={`bg-[#ffffff] dark:bg-[#242428] ${inter.className}`}>        
+      <body className={`bg-[#EEEEEE] dark:bg-[#242428] ${inter.className}`}>        
         <NextTopLoader color="#ffffff" />
         <Header />
         {children}
+        <Footer />
       </body>
     </html>
   )

@@ -1,0 +1,84 @@
+.button {
+    position: relative;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    width: 10rem;
+    height: 40px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    background-color: #a96a2a;
+    overflow: hidden;
+    border-radius: 5rem;
+}
+
+.button,
+.button__icon,
+.button__text {
+    transition: all 0.3s ease;
+}
+
+.button .button__text {
+    transform: translateX(22px);
+    color: #fff;
+    font-weight: 600;
+}
+
+.button .button__icon {
+    position: absolute;
+    transform: translateX(7.63rem);
+    height: 100%;
+    width: 39px;
+    background-color: #d17c27;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5rem;
+}
+
+.button svg {
+    width: 20px;
+    fill: #fff;
+}
+
+.button:hover {
+    background: #d17c27;
+}
+
+.button:hover .button__text {
+    color: transparent;
+}
+
+.button:hover .button__icon {
+    width: 148px;
+    transform: translateX(0.5rem);
+}
+
+.button:hover svg {
+    width: 1.8rem;
+    height: 1.8rem;
+    animation: fly-1 0.6s ease-in-out infinite alternate;
+}
+
+.button:active .button__icon {
+    background-color: #d17c27;
+}
+
+.button:active {
+    border: 1px solid #d17c27;
+}
+
+
+@keyframes fly-1 {
+    from {
+        transform: translateY(0.1em);
+    }
+
+    to {
+        transform: translateY(-0.1em);
+    }
+}
+
+#viewmoreChar {
+    margin-top: 3rem;
+}

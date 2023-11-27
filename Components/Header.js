@@ -11,7 +11,7 @@ import { ThemeProvider } from 'next-themes'
 
 const Header = () => {
   const [isFixed, setIsFixed] = useState(false);
-  const scrollThreshold = 50;
+  const scrollThreshold = 20;
 
   useEffect(() => {
     const handleScroll = () => {

@@ -16,7 +16,6 @@ const page = () => {
       <Indexpopular />
       <Indexairing />
       <Indexupcoming />
-      <Footer />
     </ThemeProvider>
   )
 }

@@ -14,6 +14,7 @@
 .imageContainer>img {
     width: 100%;
     height: 100%;
+    -o-object-fit: cover;
     object-fit: cover;
 }
 
@@ -67,12 +68,29 @@
 }
 
 .trailer-con {
-    border: 2px solid #414A4C;
+    box-shadow: rgba(73, 73, 73, 0.25) 0px 54px 55px, rgba(58, 58, 58, 0.12) 0px -12px 30px, rgba(59, 59, 59, 0.12) 0px 4px 6px, rgba(49, 49, 49, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
     aspect-ratio: 16 / 9;
+}
+
+.trailer-con>iframe {
+    width: 100%;
+}
+
+.trailer {
+    width: 81vw;
 }
 
 .characterContainer {
     width: 80vw;
+}
+
+.characterContainer>h1 {
+    margin-bottom: -0.3rem;
+}
+
+#charstaff {
+    height: 0.05rem;
+    margin-bottom: 1rem;
 }
 
 .characters {
@@ -85,11 +103,37 @@
     font-family: HelveticaLight;
 }
 
+#charimg {
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    width: 100%;
+    transition: all 0.25s ease;
+}
+
 .char-name {
     font-size: 1rem;
 }
 
-.char-role {
-    font-size: 1.05rem;
-    font-style: italic;
+.staffContainer {
+    width: 80vw;
 }
+
+#staffhead {
+    margin-bottom: -2px;
+}
+
+#linestaff {
+    margin-bottom: -1rem;
+    height: 0.05rem;
+}
+
+.staffs {
+    width: 81vw;
+    margin-left: 0;
+}
+
+/* #staffimg {
+    width: 10rem;
+    height: 10rem;
+    border-radius: 50%;
+    object-fit: cover;
+} */

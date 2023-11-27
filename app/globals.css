@@ -35,7 +35,8 @@
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
 }
 
 html,
@@ -46,6 +47,10 @@ body {
     overflow-x: hidden;
 }
 
+body.drawer-opened {
+    background-color: #ffffff;
+}
+
 .header-con {
     position: fixed;
     width: calc(100vw - 0.6rem);
@@ -54,17 +59,24 @@ body {
 }
 
 .header-con.fixed {
-    background: rgba(255, 255, 255, 0.4);
+    background: #ffffff66;
     -webkit-backdrop-filter: blur(14px);
     backdrop-filter: blur(14px);
     z-index: 999999;
+    transition: all 0.4s ease;
 }
 
 .header {
     width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
-    justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
     padding: 0 4.5rem;
 }
 
@@ -108,8 +120,12 @@ body::-webkit-scrollbar-thumb {
     padding: 0.3rem 0.8rem;
     width: 20rem;
     border-radius: 5rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: space-between;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
 }
 
 .scrollbar-container input {
@@ -129,6 +145,22 @@ body::-webkit-scrollbar-thumb {
     outline: none;
 }
 
+.searchbarinput::-webkit-input-placeholder {
+    font-size: 0.87rem;
+}
+
+.searchbarinput::-moz-placeholder {
+    font-size: 0.87rem;
+}
+
+.searchbarinput:-ms-input-placeholder {
+    font-size: 0.87rem;
+}
+
+.searchbarinput::-ms-input-placeholder {
+    font-size: 0.87rem;
+}
+
 .searchbarinput::placeholder {
     font-size: 0.87rem;
 }
@@ -136,9 +168,15 @@ body::-webkit-scrollbar-thumb {
 .anime-container {
     /* width: 28rem; */
     padding: 0 6rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: flex-start;
-    justify-content: flex-start;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
     gap: 2rem;
 }
 
@@ -146,7 +184,8 @@ body::-webkit-scrollbar-thumb {
     width: 2.4rem;
     height: 2.4rem;
     border-radius: 50%;
-    object-fit: cover;
+    -o-object-fit: cover;
+       object-fit: cover;
 }
 
 #drawerImg {
@@ -156,9 +195,15 @@ body::-webkit-scrollbar-thumb {
 }
 
 .mode {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
-    justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     margin-left: -5rem;
 }
 
