@@ -30,6 +30,8 @@ button.learn-more {
 }
 
 button.learn-more .circle {
+    -webkit-transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+    -o-transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
     transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
     position: relative;
     display: block;
@@ -40,6 +42,8 @@ button.learn-more .circle {
 }
 
 button.learn-more .circle .icon {
+    -webkit-transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+    -o-transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
     transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
     position: absolute;
     top: 0;
@@ -49,6 +53,8 @@ button.learn-more .circle .icon {
 }
 
 button.learn-more .circle .icon.arrow {
+    -webkit-transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+    -o-transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
     transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
     left: 0.625rem;
     width: 1.125rem;
@@ -65,10 +71,14 @@ button.learn-more .circle .icon.arrow::before {
     height: 0.625rem;
     border-top: 0.125rem solid #fff;
     border-right: 0.125rem solid #fff;
-    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+            transform: rotate(45deg);
 }
 
 button.learn-more .button-text {
+    -webkit-transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+    -o-transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
     transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
     position: absolute;
     top: 0;
@@ -90,7 +100,9 @@ button:hover .circle {
 
 button:hover .circle .icon.arrow {
     background: #fff;
-    transform: translate(1rem, 0);
+    -webkit-transform: translate(1rem, 0);
+        -ms-transform: translate(1rem, 0);
+            transform: translate(1rem, 0);
 }
 
 button:hover .button-text {

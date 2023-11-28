@@ -68,7 +68,8 @@
 }
 
 .trailer-con {
-    box-shadow: rgba(73, 73, 73, 0.25) 0px 54px 55px, rgba(58, 58, 58, 0.12) 0px -12px 30px, rgba(59, 59, 59, 0.12) 0px 4px 6px, rgba(49, 49, 49, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    -webkit-box-shadow: rgba(73, 73, 73, 0.25) 0px 54px 55px, rgba(58, 58, 58, 0.12) 0px -12px 30px, rgba(59, 59, 59, 0.12) 0px 4px 6px, rgba(49, 49, 49, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+            box-shadow: rgba(73, 73, 73, 0.25) 0px 54px 55px, rgba(58, 58, 58, 0.12) 0px -12px 30px, rgba(59, 59, 59, 0.12) 0px 4px 6px, rgba(49, 49, 49, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
     aspect-ratio: 16 / 9;
 }
 
@@ -104,8 +105,11 @@
 }
 
 #charimg {
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    -webkit-box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     width: 100%;
+    -webkit-transition: all 0.25s ease;
+    -o-transition: all 0.25s ease;
     transition: all 0.25s ease;
 }
 

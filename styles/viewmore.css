@@ -1,12 +1,18 @@
 .button {
     position: relative;
     left: 50%;
-    transform: translate(-50%, 0%);
+    -webkit-transform: translate(-50%, 0%);
+        -ms-transform: translate(-50%, 0%);
+            transform: translate(-50%, 0%);
     width: 10rem;
     height: 40px;
     cursor: pointer;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     background-color: #a96a2a;
     overflow: hidden;
     border-radius: 5rem;
@@ -15,24 +21,36 @@
 .button,
 .button__icon,
 .button__text {
+    -webkit-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
     transition: all 0.3s ease;
 }
 
 .button .button__text {
-    transform: translateX(22px);
+    -webkit-transform: translateX(22px);
+        -ms-transform: translateX(22px);
+            transform: translateX(22px);
     color: #fff;
     font-weight: 600;
 }
 
 .button .button__icon {
     position: absolute;
-    transform: translateX(7.63rem);
+    -webkit-transform: translateX(7.63rem);
+        -ms-transform: translateX(7.63rem);
+            transform: translateX(7.63rem);
     height: 100%;
     width: 39px;
     background-color: #d17c27;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
-    justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     border-radius: 5rem;
 }
 
@@ -51,13 +69,16 @@
 
 .button:hover .button__icon {
     width: 148px;
-    transform: translateX(0.5rem);
+    -webkit-transform: translateX(0.5rem);
+        -ms-transform: translateX(0.5rem);
+            transform: translateX(0.5rem);
 }
 
 .button:hover svg {
     width: 1.8rem;
     height: 1.8rem;
-    animation: fly-1 0.6s ease-in-out infinite alternate;
+    -webkit-animation: fly-1 0.6s ease-in-out infinite alternate;
+            animation: fly-1 0.6s ease-in-out infinite alternate;
 }
 
 .button:active .button__icon {
@@ -69,13 +90,28 @@
 }
 
 
-@keyframes fly-1 {
+@-webkit-keyframes fly-1 {
     from {
-        transform: translateY(0.1em);
+        -webkit-transform: translateY(0.1em);
+                transform: translateY(0.1em);
     }
 
     to {
-        transform: translateY(-0.1em);
+        -webkit-transform: translateY(-0.1em);
+                transform: translateY(-0.1em);
+    }
+}
+
+
+@keyframes fly-1 {
+    from {
+        -webkit-transform: translateY(0.1em);
+                transform: translateY(0.1em);
+    }
+
+    to {
+        -webkit-transform: translateY(-0.1em);
+                transform: translateY(-0.1em);
     }
 }
 
