@@ -34,11 +34,5 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 
-
-*.jpg
-*.mp4
-
-/public/Images
-
 next.svg
 vercel.svg
