@@ -1,6 +1,5 @@
-# Link : 
+# Visit the link to explore the project
 https://anihub-4-u.vercel.app/
-## Go through the link for the website
 
 
 
