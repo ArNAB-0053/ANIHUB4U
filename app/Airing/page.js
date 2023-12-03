@@ -4,10 +4,13 @@ import React from 'react'
 const page = () => {
   return (
     <div>
-      <div className='pt-12'>
+      <div className=''>
         <Body
           baseURL="https://api.jikan.moe/v4"
-          endpoint="top/anime?filter=airing" />
+          endpoint="top/anime?filter=airing" 
+          titleClass='w-64'
+        />
+          
       </div>
     </div>
   )

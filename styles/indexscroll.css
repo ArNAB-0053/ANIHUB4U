@@ -148,6 +148,7 @@
     mask: -webkit-gradient(linear, left top, left bottom, color-stop(10%, transparent), color-stop(40%, white));
     mask: linear-gradient(180deg, transparent 10%, white 40%);
     /* animation: scroll 20s linear infinite; */
+    padding: 0 2rem;
 }
 
 @-webkit-keyframes scroll {

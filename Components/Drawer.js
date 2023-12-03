@@ -27,7 +27,7 @@ const Drawer = () => {
     <>
       <button className="drawer-container" onClick={handleOpenDrawer}>
         <Image
-          src='/Images/drawer.svg'
+          src='/Images/drawer3.svg'
           width="1920"
           height="200"
           id='drawerImg'

@@ -49,11 +49,11 @@
     -webkit-transform: rotate(180deg);
         -ms-transform: rotate(180deg);
             transform: rotate(180deg);
-    left: 0;
+    left: 2.9rem;
 }
 
 .scroll-right{
-    left: 98%;
+    left: 95%;
 }
 
 #nxtimg, #previmg {
@@ -68,4 +68,10 @@
     -webkit-transition: all 0.25s ease;
     -o-transition: all 0.25s ease;
     transition: all 0.25s ease;
+}
+
+#animeheading {
+    font-family: FuturaNowHeadlineExtraBold;
+    font-size: 2rem;
+    text-transform: uppercase;
 }

@@ -1,0 +1,118 @@
+.footerline {
+    height: 1px;
+    width: 94%;
+    margin-left: 3%;
+    background: #3e3e3e;
+    margin-top: 2rem;
+}
+
+
+#verticalLine {
+    width: 1px;
+}
+
+.links {
+    border-radius: 0.5rem;
+    /* border: 0.3px solid #dadada; */
+}
+
+#linkIcon {
+    width: 1.9rem;
+    height: 1.9rem;
+    scale: 0.9;
+    transition: all 0.5s ease;
+}
+
+/* #linkIcon:hover {
+    scale: 1.1;
+} */
+
+.hline {
+    width: 1.4rem;
+    height: 0.7px;
+    border-radius: 5rem;
+}
+
+#hline {
+    width: 35rem;
+    height: 0.005rem;
+    border-radius: 5rem;
+}
+
+svg {
+    transition: all 3s ease;
+}
+
+#link1 {
+    border-top-left-radius: 1rem;
+
+}
+
+#link2 {
+    border-top-right-radius: 1rem;
+}
+
+#link3 {
+    border-bottom-left-radius: 1rem;
+}
+
+#link4 {
+    border-bottom-right-radius: 1rem;
+}
+
+.linksCon:hover #linkIcon {
+    animation: colorAni 0.5s ease forwards;
+    scale: 1.2;
+}
+
+#link1:hover {
+    background: linear-gradient(to right, #1d7ece, #4b7bec);
+}
+
+#link2:hover {
+    background: linear-gradient(to right, #55acee, #1da1f2);
+}
+
+#link3:hover {
+    background: #000;
+}
+
+#link4:hover {
+    background: #f09433;
+    background: -moz-linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+    background: -webkit-linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+    background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#f09433', endColorstr='#bc1888', GradientType=1);
+}
+
+@keyframes colorAni {
+    from {
+        color: #ffffff;
+    }
+
+    to {
+        color: #fff;
+    }
+}
+
+.basic li {
+    transition: all 0.3s ease;
+}
+
+.basic li:not(:hover) {
+    margin-top: 0;
+}
+
+.basic li:hover {
+    margin-top: -1rem;
+}
+
+#followtxt {
+    rotate: -90deg;
+    text-orientation: mixed;
+    white-space: nowrap;
+    text-transform: uppercase;
+    margin-right: -3rem;
+    font-family: FuturaNowHeadlineExtraBold;
+    color: #ff0000;
+}

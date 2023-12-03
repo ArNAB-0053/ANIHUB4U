@@ -12,8 +12,8 @@ const Body = ({
     endpoint,
     numItems,
     styleClassName = "imgContainer",
-    styleClass = "grid grid-rows-5 grid-cols-5 gap-12 p-8",
-    linkClassName = '',
+    styleClass = "grid grid-rows-5 grid-cols-5 my-16 mx-10 pt-12 px-2 gap-y-6",
+    linkClassName = 'flex flex-col items-center',
     linkWH = "w-64 h-96",
     styleRounded = "rounded-xl",
     styleMargin = "",
@@ -89,14 +89,14 @@ const Body = ({
             {anime.length > 0 && (
                 <div className={`${styleClassName} ${styleClass}`} ref={scrollRef}>
                     {anime.map((anime, i) => {
-                        return <Link className={`${linkClassName} ${linkWH} place-self-center ${styleRounded} ${styleMargin}`} href={`/${anime.mal_id}`} >
+                        return <Link className={`${linkClassName} ${linkWH} ${styleRounded} ${styleMargin}`} href={`/${anime.mal_id}`} >
                             <img
                                 key={i}
                                 src={anime.images.jpg.large_image_url} alt=""
-                                className={`object-cover block w-full h-full scale-90 hover:scale-100 ${styleRounded} `}
+                                className={`object-cover block ml-1 w-[90%] h-[90%] scale-90 hover:scale-100 ${styleRounded} `}
                                 id='animeimg'
                             />
-                            <h1 className={`text-black dark:text-white text-sm tracking-normal leading-4 text-center font-bold mt-2 ${titleClass}`}>{anime.title}</h1>
+                            <h1 className={`text-black dark:text-white  mt-[-0.2rem] text-sm tracking-normal leading-4 text-center font-bold py-2 px-8 whitespace-nowrap overflow-hidden overflow-ellipsis ${titleClass}`}>{anime.title}</h1>
                         </Link>
                     })}
 

@@ -1,6 +1,5 @@
 "use client"
 
-import Footer from '@/Components/Footer'
 import React, { useEffect } from 'react'
 import Indexscroll from '@/Components/Indexscroll'
 import Indexpopular from '@/Components/Indexpopular'
