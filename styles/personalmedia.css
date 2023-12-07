@@ -1,0 +1,39 @@
+#perLink li svg{
+    width: 1.7rem;
+    height: 1.7rem;
+}
+
+#perLink li svg:hover {
+    color: rgb(246, 36, 36);
+    filter: drop-shadow(0 0 10px rgb(255, 36, 36));
+}
+
+/* #perLink li:nth-child(1) svg:hover {
+    color: greenyellow;
+    filter: drop-shadow(0 0 10px #20f300ef);
+}
+
+#perLink li:nth-child(2) svg:hover {
+    color: lightblue;
+    filter: drop-shadow(0 0 10px #70caffef);
+}
+
+#perLink li:nth-child(3) svg:hover {
+    color: rgb(0, 0, 0);
+    filter: drop-shadow(0 0 10px #6c6c6cef);
+}
+
+#perLink li:nth-child(4) svg:hover {
+    color: #9cc4ff;
+    filter: drop-shadow(0 0 10px #a8cbff);
+}
+
+#perLink li:nth-child(5) svg:hover {
+    color: rgb(246, 36, 36);
+    filter: drop-shadow(0 0 10px rgb(255, 36, 36));
+}
+
+#perLink li:nth-child(6) svg:hover {
+    color: rgb(0, 0, 0);
+    filter: drop-shadow(0 0 5rem rgb(32, 32, 32));
+} */

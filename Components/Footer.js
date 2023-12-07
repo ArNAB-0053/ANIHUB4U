@@ -1,71 +1,73 @@
 "use client";
 import Image from 'next/image'
 import Link from 'next/link'
-import React, { useState } from 'react'
+import React, { useRef, useState } from 'react'
 import '../styles/footer.css'
 import '../styles/copylink.css'
 import '../styles/footerhoverani.css'
 import '../app/globals.css'
-
+import Personalmedia from './Personalmedia';
 import {
   WhatsappShareButton,
-  WhatsappIcon,
-} from 'next-share'
-
-import {
   FacebookShareButton,
-  FacebookIcon,
-} from 'next-share'
-
-import {
   LineShareButton,
-  LineIcon,
-} from 'next-share'
-
-import {
   TelegramShareButton,
-  TelegramIcon,
-} from 'next-share'
-
-import {
   TwitterShareButton,
+
+  WhatsappIcon,
+  FacebookIcon,
+  LineIcon,
+  TelegramIcon,
   TwitterIcon,
 } from 'next-share'
 
 const Footer = () => {
+
   // Copying my website link into clipboard
   const handleCopyToClipboard = () => {
     navigator.clipboard.writeText('https://anihub-4-u.vercel.app/');
   };
 
-
-
-  // const [drawerclose, setDrawerclose] = useState(false)
+  // About & Contact
   const [isBlur, setisBlur] = useState(false)
-  const [aboutOpen, setAboutOpen] = useState(false)
-  const [contactOpen, setContactOpen] = useState(false)
+  const aboutRef = useRef(null);
+  const contactRef = useRef(null);
 
-  const aboutPageHandler = () => {
-    document.body.scrollTop = 0;
-    document.documentElement.scrollTop = 0;
-    setAboutOpen(true);
-    setisBlur(true);
-    // setDrawerclose(false); // Reset drawerclose state
-  }
+  const showAbout = () => {
+    if (aboutRef.current) {
+      setTimeout(() => {
+        aboutRef.current.showModal();
+      }, 400);
+      setisBlur(true);
+    }
+  };
 
-  const contactPageHandler = () => {
-    document.body.scrollTop = 0;
-    document.documentElement.scrollTop = 0;
-    setContactOpen(true);
-    setisBlur(true);
-    // setDrawerclose(false); // Reset drawerclose state
-  }
+  const closeAbout = () => {
+    if (aboutRef.current) {
+      setTimeout(() => {
+        setisBlur(false);
+      }, 400);
+      aboutRef.current.close();
+    }
+  };
 
-  // const handleCloseDrawer = () => {
-  //   setDrawerclose(true);
-  //   setisBlur(false);
-  //   setDraweropen(false); // Reset draweropen state
-  // }
+  const showContact = () => {
+    if (contactRef.current) {
+      setTimeout(() => {
+        contactRef.current.showModal();
+      }, 400);
+      setisBlur(true);
+    }
+  };
+
+  const closeContact = () => {
+    if (contactRef.current) {
+      setTimeout(() => {
+        setisBlur(false);
+      }, 400);
+      contactRef.current.close();
+    }
+  };
 
   return (
     <>
@@ -89,10 +91,10 @@ const Footer = () => {
           <div className="my-4 bg-[#535353] dark:bg-zinc-600" id="hline"></div>
           <div className="footerContainer flex items-end justify-start gap-x-10 text-zinc-500">
             <div className="basic flex flex-col gap-2">
-              <button id='aboutbtn' className='w-28 h-10 border-2 border-solid border-[#ff0000] dark:border-2 dark:border-solid dark:border-[#ff0000] text-[#ff0000] dark:bg-[#3a3a3aaa] dark:text-[#ff0000] rounded-[6px]' onClick={aboutPageHandler}>
+              <button id='aboutbtn' className='w-28 h-10 border-2 border-solid border-[#ff0000] dark:border-2 dark:border-solid dark:border-[#ff0000] text-[#ff0000] dark:bg-[#3a3a3aaa] dark:text-[#ff0000] rounded-[6px]' onClick={showAbout}>
                 About
               </button>
-              <button id='contactbtn' className='w-28 h-10 bg-[#ff0000] text-[#ffffff] dark:bg-[#ff0000] dark:text-[#fff] rounded-[6px]' onClick={contactPageHandler}>
+              <button id='contactbtn' className='w-28 h-10 bg-[#ff0000] text-[#ffffff] dark:bg-[#ff0000] dark:text-[#fff] rounded-[6px]' onClick={showContact}>
                 Contact
               </button>
             </div>
@@ -211,16 +213,55 @@ const Footer = () => {
             </Link>
           </div>
         </div>
-
-        <div className={`about-content dark:bg-[#ffffff59]  ${aboutOpen ? 'clicked' : ''}`}>
-          Magnam dolorem, sunt a earum ipsa eligendi officiis cumque maiores debitis adipisci voluptatem? Consequuntur, neque incidunt facilis error culpa explicabo dolorum ullam accusantium dolorem rem ut similique porro minus voluptatem repellat numquam odit fugit optio adipisci beatae quo enim vitae quod. Consectetur a tempora, ipsa quibusdam, obcaecati dolores blanditiis labore qui totam eligendi aliquid doloremque ipsum officiis sit magni. Sapiente commodi saepe velit perspiciatis eos delectus minus, sequi inventore? Consectetur quas at iure, praesentium tenetur ut enim rerum similique. Cupiditate, et. Blanditiis, velit? Nesciunt, minima praesentium alias aperiam iusto quasi odit eum facilis quae ipsum quis non cumque tempora sed porro ea molestias? Eum temporibus expedita doloribus suscipit saepe aliquid cum distinctio fuga deserunt, libero, ducimus culpa minus incidunt accusantium ut ullam optio molestiae nulla magnam illo neque. Magni ab temporibus animi ut architecto at id natus ullam illum in distinctio cupiditate, ratione mollitia odio, quasi fugit reiciendis quod vero saepe consequatur suscipit quam, tempore repudiandae veniam. Voluptates quam saepe minus qui eligendi, quos eaque officia consectetur distinctio reiciendis id odio ratione atque possimus non quaerat, perferendis autem unde doloribus provident assumenda quo impedit! Officiis eum laborum accusamus earum quo amet quasi possimus? Aliquam nisi architecto necessitatibus eligendi distinctio ut quas ad dolor inventore tenetur. Facilis magnam ipsam eos ullam possimus dignissimos incidunt inventore eligendi fuga! Perferendis molestias officia sint quasi rem provident quas dolorem iusto qui quis fugiat similique vel quia saepe hic obcaecati ipsa in ea quam mollitia, deserunt magnam.
-        </div>
-
-        <div className={`contact-content dark:bg-[#ffffff59]  ${contactOpen ? 'clicked' : ''}`}>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. In exercitationem perferendis nesciunt doloribus iure veritatis ipsa vitae odit hic expedita omnis doloremque, natus dolores voluptas impedit temporibus corrupti tempora tenetur? Libero, corporis voluptatem repellat natus ipsum delectus iure quibusdam. Quibusdam nam officiis possimus quidem omnis.
-        </div>
-        <div className={`whole dark:bg-[#00000066] ${isBlur ? 'blured' : ''}`}></div>
       </div>
+
+      <dialog ref={aboutRef} className='text-white bg-[#222222a4] dark:bg-[#3d3d3d4d] w-[70vw] h-[70vh] ml-[15vw] mt-[15vh] px-20 py-8 overflow-hidden border-[1px] border-solid border-[#ff0000aa]'>
+        <h1 id='aboutme' className='mt-4 absolute left-1/2 top-[3rem] translate-x-[-50%] translate-y-[-50%] text-[#ff3a3a] text-[4rem]'>About me!</h1>
+        <Image
+          src='/Images/profile.jpg'
+          width="1920"
+          height="200"
+          id='profImg'
+          className='absolute right-20 top-[10rem] w-48 h-48 rounded-[0.82rem] scale-90 hover:scale-100'>
+        </Image>
+        <h2 id='hi' className='text-[3.5rem] mt-28'>Hi, I'm</h2>
+        <h2 id='name' className='mt-[-1.6rem] text-[2.5rem] text-[#ff3a3a]'>Arnab Bhattacharyya</h2>
+        <p id='dgree' className='mt-2 w-[70%]'>I'm a student of Bachelor of Technology in Computer Science & Engineering - Artificial Intelligence & Machine Learning.</p>
+
+        <Personalmedia />
+
+        <Image
+          src='/Images/note.svg'
+          width="1920"
+          height="200"
+          id='noteImg'
+          className='absolute top-[75%] left-[12%] w-[5.8rem] h-[5.8rem]'>
+        </Image>
+        <p id='cause' className='absolute top-[85%] left-[61%] translate-x-[-61%] translate-y-[-50%] w-[60%] italic'>This is a personal project to learn more about Next JS, Tailwind CSS and to gain proficiency in API handling.</p>
+        <button id='abtBtn' className='bg-[#ff0000]  text-white absolute left-[95%] top-0 w-14 h-12 overflow-hidden' onClick={closeAbout}>
+          <Image
+            src='/Images/cross.svg'
+            width="1920"
+            height="200"
+            id='crossImg'
+            className='w-[2.2rem] h-[2.2rem] pl-4'>
+          </Image>
+        </button>
+      </dialog>
+
+      <dialog ref={contactRef} className='text-white bg-[#222222a4] dark:bg-[#3d3d3d4d] w-[70vw] h-[70vh] ml-[15vw] mt-[15vh] px-20 py-8 overflow-hidden border-[1px] border-solid border-[#ff0000aa]'>
+        <p>This is a dialog box.</p>
+        <button id='cntBtn' className='bg-[#ff0000]  text-white absolute left-[95%] top-0 w-14 h-12 overflow-hidden' onClick={closeContact}>
+          <Image
+            src='/Images/cross.svg'
+            width="1920"
+            height="200"
+            id='crossImg'
+            className='w-[2.2rem] h-[2.2rem] pl-4'>
+          </Image>
+        </button>
+      </dialog>
+      <div className={`whole bg-[#515151a4] dark:bg-[#3d3d3d4d] ${isBlur ? 'blured' : ''}`}></div>
     </>
   )
 }

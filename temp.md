@@ -1,42 +1,52 @@
-"use state"
-import Image from 'next/image'
-import React, { useState } from 'react'
-import '../styles/drawer.css'
+<ul id='perLink' className='flex gap-2 items-center justify-start mt-1'>
+            {/* whatsapp */}
+            <li className='w-10 h-10 '>
+                <WhatsappShareButton
+                    url={`https://wa.me/624767878`}
+                    title={'next-share is a social share buttons for your next React apps.'}
+                >
+                    <WhatsappIcon className='w-10 h-10 scale-90 hover:scale-110' round />
+                </WhatsappShareButton>
+            </li>
 
-const Drawer = () => {
-  const [draweropen, setDraweropen] = useState(false)
-  const [drawerclose, setDrawerclose] = useState(false)
+            {/* {Facebook} */}
+            <li className='w-10 h-10 '>
+                <FacebookShareButton
+                    url={'https://www.facebook.com/arnab.bhattacharyya.520'}
+                    quote={'next-share is a social share buttons for your next React apps.'}
+                >
+                    <FacebookIcon className='w-10 h-10 scale-90 hover:scale-110' round />
+                </FacebookShareButton>
+            </li>
 
-  const handleOpenDrawer = () => {
-    setDraweropen(true);
-  }
+            {/* Twitter */}
+            <li className='w-10 h-10 '>
+                <TwitterShareButton
+                    url={'https://twitter.com/Arnab19_12_2002'}
+                    title={'next-share is a social share buttons for your next React apps.'}
+                >
+                    <TwitterIcon className='w-10 h-10 scale-90 hover:scale-110' round />
+                </TwitterShareButton>
+            </li>
 
-  const handleCloseDrawer = () => {
-    setDrawerclose(true);
-  }
+            {/* Linkedin */}
+            <li>
+                <LinkedinShareButton url={'https://www.linkedin.com/in/arnab-bhattacharyya-380966291/'}>
+                    <LinkedinIcon className='w-10 h-10 scale-90 hover:scale-110' round />
+                </LinkedinShareButton>
+            </li>
 
-  return (
-    <>
-      <button className="drawer-container" onClick={handleOpenDrawer}>
-        <Image
-          src='/Images/drawer.svg'
-          width="1920"
-          height="200"
-          id='drawerImg'
-          className='drawer invert-0 dark:invert'>
-        </Image>
-      </button>
-      <div className={`drawer-content z-40 dark:bg-[#00000088]  ${draweropen ? 'opened' : ''} ${drawerclose ? 'closed' : ''}`}>
-        <span className="closebtn bg-[#00000022] flex items-center justify-between px-4 py-2" onClick={handleCloseDrawer} >
-          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-left" viewBox="0 0 16 16">
-            <path fill-rule="evenodd" d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z" />
-          </svg>
-          Close
-        </span>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis perspiciatis quo quidem, explicabo repellat sit accusantium nostrum obcaecati, est sapiente ex temporibus! Tempore, mollitia repellendus amet aperiam possimus quas eos animi praesentium repellat. Magni enim quod quam maxime consequatur, deserunt officia maiores facilis esse quis!
-      </div>
-    </>
-  )
-}
+            {/* Instagram */}
+            <li>
+                <Link href="https://www.instagram.com/__arnab_bhattacharyya/" target="_blank" rel="noopener noreferrer">
+                    <InstagramIcon className='w-10 h-10 scale-90 hover:scale-110' round />
+                </Link>
+            </li>
 
-export default Drawer
+            {/* Github */}
+            <li>
+                <Link href="https://github.com/ArNAB-0053">
+                    <GithubIcon className='w-10 h-10 scale-90 hover:scale-110 dark:invert' round />
+                </Link>
+            </li>
+        </ul>

@@ -32,6 +32,16 @@
     src: url('../public/Fonts/HelveticaNowText-Light.ttf');
 }
 
+@font-face {
+    font-family: DancingScriptBold;
+    src: url('../public/Fonts/DancingScript-Bold.ttf');
+}
+
+@font-face {
+    font-family: DancingScriptMedium;
+    src: url('../public/Fonts/DancingScript-Medium.ttf');
+}
+
 * {
     margin: 0;
     padding: 0;
