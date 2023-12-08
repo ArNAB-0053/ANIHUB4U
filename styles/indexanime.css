@@ -1,12 +1,10 @@
-
-
 .index-anime-content {
     overflow-x: hidden;
     overflow-y: hidden;
-    height: 43vh;
+    height: auto;
     /* background: #fff; */
     grid-auto-flow: column;
-    grid-auto-columns: 15vw;
+    grid-auto-columns: auto;
     -ms-scroll-snap-type: x mandatory;
         scroll-snap-type: x mandatory;
     scroll-behavior: smooth;
@@ -15,6 +13,13 @@
             justify-content: start;
     -ms-flex-line-pack: start;
         align-content: start;
+        position: relative;
+        padding: 0;
+        width: 87.5vw;
+        margin-left: -1.5vw;
+        box-shadow: none;
+        border: none;
+        /* background: #000; */
 }
 
 .index-anime-content>* {
@@ -27,12 +32,7 @@
     padding-right: 1rem;
 }
 
-.index-anime-main {
-    /* background: green; */
-    padding: 0 2rem;
-}
-
-.index-anime-container>button {
+#animeConID>button {
     background: #0000004d;
     -webkit-backdrop-filter: blur(6px);
     backdrop-filter: blur(6px);
@@ -40,20 +40,29 @@
     width: 2rem;
     height: 25%;
     position: absolute;
-    top: 30%;
+    top: 53%;
+    transform: translate(-50%, -50%);
     border-radius: 2rem;
     padding: 0.2rem;
+}
+
+#animeConID {
+    height: 100%;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .scroll-left{
     -webkit-transform: rotate(180deg);
         -ms-transform: rotate(180deg);
             transform: rotate(180deg);
-    left: 2.9rem;
+    left: 6vw;
 }
 
 .scroll-right{
-    left: 95%;
+    right: 4vw;
 }
 
 #nxtimg, #previmg {

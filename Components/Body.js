@@ -5,7 +5,7 @@ import Link from 'next/link';
 import '../styles/indexanime.css'
 import '../styles/viewmoreani.css'
 import Image from 'next/image'
-import { ThemeProvider } from 'next-themes'
+// import { ThemeProvider } from 'next-themes'
 
 const Body = ({
     baseURL,
@@ -84,7 +84,7 @@ const Body = ({
     };
 
     return (
-        <ThemeProvider attribute="class">
+        <div id='animeConID'>
             {/* Render data when anime length is greater than 0 means when data is fetched then only show view more option */}
             {anime.length > 0 && (
                 <div className={`${styleClassName} ${styleClass}`} ref={scrollRef}>
@@ -130,7 +130,7 @@ const Body = ({
                     className='prevArrow'>
                 </Image>
             </button>
-        </ThemeProvider>
+        </div>
     );
 };
 

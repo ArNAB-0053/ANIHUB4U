@@ -6,14 +6,14 @@ import '../styles/indexanime.css'
 const Indexpopular = () => {
     return (
     <div className='index-anime-main'>
-      <div className='index-anime-container w-[94.8vw] ml-[-0.5rem]'>
+      <div className='index-anime-container'>
         <h1 id='animeheading' className='ml-12 '>Popular Animes</h1>
         <Body
           baseURL="https://api.jikan.moe/v4"
           endpoint="top/anime?filter=bypopularity"
           numItems={10}
           styleClassName='index-anime-content'
-          styleClass="grid py-2 mx-[2rem]"
+          styleClass="grid py-2 gap-2"
           linkClassName='link-container'
           linkWH='w-52 h-64'
           styleRounded='rounded'
