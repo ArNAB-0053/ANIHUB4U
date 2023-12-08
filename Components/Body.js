@@ -10,6 +10,7 @@ import Image from 'next/image'
 const Body = ({
     baseURL,
     endpoint,
+    slicingStart = 0,
     numItems,
     styleClassName = "imgContainer",
     styleClass = "grid grid-rows-5 grid-cols-5 my-16 mx-10 pt-12 px-2 gap-y-6",
@@ -39,7 +40,7 @@ const Body = ({
             const res = await axios.get(`${baseURL}/${endpoint}`);
             const data = res.data;
             // console.log("context", data.data);
-            setAnime(data.data.slice(0, numItems));
+            setAnime(data.data.slice(slicingStart, numItems));
         }
         catch (error) {
             if (axios.isCancel(error)) {
@@ -92,7 +93,7 @@ const Body = ({
                         return <Link className={`${linkClassName} ${linkWH} ${styleRounded} ${styleMargin}`} href={`/${anime.mal_id}`} >
                             <img
                                 key={i}
-                                src={anime.images.jpg.large_image_url} alt=""
+                                src={anime.images.jpg.large_image_url} alt={anime.title}
                                 className={`object-cover block ml-1 w-[90%] h-[90%] scale-90 hover:scale-100 ${styleRounded} `}
                                 id='animeimg'
                             />

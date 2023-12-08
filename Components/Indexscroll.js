@@ -106,7 +106,7 @@ const Indextext = () => {
   useEffect(() => {
     const scrollRightInterval = setInterval(() => {
       handleScrollRight();
-    }, 2000);
+    }, 10000);
     duplicate();
     
     return () => {

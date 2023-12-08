@@ -3,7 +3,7 @@ import axios from "axios";
 import React, { useEffect, useState } from "react";
 import Link from "next/link";
 import '../../styles/popular.css'
-import '../../styles/viewmore.css'
+import '../../styles/showmore.css'
 
 const page = ({ params }) => {
     const baseURL = "https://api.jikan.moe/v4";
@@ -44,9 +44,16 @@ const page = ({ params }) => {
     };
 
     const getCharacters = async (animeID, newNumChar) => {
-        const response = await axios.get(`https://api.jikan.moe/v4/anime/${animeID}/characters`)
-        const data = response.data;
-        setCharacters(data.data.slice(0, newNumChar))
+        try {
+            const response = await axios.get(`https://api.jikan.moe/v4/anime/${animeID}/characters`)
+            const data = response.data;
+            setCharacters(data.data.slice(0, newNumChar))
+        }
+
+        catch (error) {
+            console.log(error)
+        }
+
     }
 
 
@@ -65,10 +72,16 @@ const page = ({ params }) => {
     };
 
     const getStaff = async (animeID, newNumStaff) => {
-        const response = await axios.get(`https://api.jikan.moe/v4/anime/${animeID}/staff`);
-        const data = response.data;
-        // Update staffs state with the new data
-        setStaffs(data.data.slice(0, newNumStaff));
+        try {
+            const response = await axios.get(`https://api.jikan.moe/v4/anime/${animeID}/staff`);
+            const data = response.data;
+            // Update staffs state with the new data
+            setStaffs(data.data.slice(0, newNumStaff));
+        }
+
+        catch (error) {
+            console.log(error)
+        }
     };
 
     return (
@@ -157,7 +170,7 @@ const page = ({ params }) => {
                                 <div className="character">
                                     <img id="charimg" className="h-36 scale-90 rounded-xl hover:scale-100" src={images?.jpg.image_url} alt="" />
                                     <h4 className="char-name  text-black dark:text-white">{name}</h4>
-                                    <p className="char-role text-sm text-green-700">{role}</p>
+                                    <p className="char-role text-sm text-green-700 dark:text-green-500">{role}</p>
                                 </div>
                             </Link>
                         })}
@@ -184,7 +197,7 @@ const page = ({ params }) => {
                                 <img className="w-20 h-20 object-cover object-start rounded-full" id="staffimg" src={images?.jpg.image_url} alt="" />
                                 <div className="staff ">
                                     <h4 className="staff-name  text-black dark:text-white">{name}</h4>
-                                    <p className="staff-role text-sm w-44 break-words text-green-700">{positions}</p>
+                                    <p className="staff-role text-sm w-44 break-words text-green-700 dark:text-green-500">{positions}</p>
                                 </div>
                             </Link>
                         })}

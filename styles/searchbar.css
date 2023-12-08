@@ -1,0 +1,33 @@
+.searchbarinput:focus {
+    background: none;
+    border: none;
+    outline: none;
+}
+
+.searchbarinput::-webkit-input-placeholder {
+    font-size: 0.87rem;
+}
+
+.searchbarinput::-moz-placeholder {
+    font-size: 0.87rem;
+}
+
+.searchbarinput:-ms-input-placeholder {
+    font-size: 0.87rem;
+}
+
+.searchbarinput::-ms-input-placeholder {
+    font-size: 0.87rem;
+}
+
+.searchbarinput::placeholder {
+    font-size: 0.87rem;
+}
+
+/* Disable search clear button in Chrome, Safari, and Edge */
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-clear-button {
+    -webkit-appearance: none;
+    appearance: none;
+    display: none;
+}

@@ -11,7 +11,8 @@ const Indexpopular = () => {
         <Body
           baseURL="https://api.jikan.moe/v4"
           endpoint="top/anime?filter=bypopularity"
-          numItems={10}
+          slicingStart={1}
+          numItems={11}
           styleClassName='index-anime-content'
           styleClass="grid py-2 gap-2"
           linkClassName='link-container'

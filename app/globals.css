@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+nextjs-portal {
+    display: none;
+}
+
 @font-face {
     font-family: FuturaNowHeadlineExtraBold;
     src: url('../public/Fonts/FuturaNowHeadlineExtraBold.ttf');
@@ -46,7 +50,7 @@
     margin: 0;
     padding: 0;
     -webkit-box-sizing: border-box;
-            box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 html,
@@ -84,11 +88,11 @@ body.drawer-opened {
     display: -ms-flexbox;
     display: flex;
     -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
     -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
     padding: 0 4.5rem;
 }
 
@@ -136,8 +140,8 @@ body::-webkit-scrollbar-thumb {
     display: -ms-flexbox;
     display: flex;
     -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
 }
 
 .scrollbar-container input {
@@ -151,32 +155,6 @@ body::-webkit-scrollbar-thumb {
     margin-right: 1rem;
 }
 
-.searchbarinput:focus {
-    background: none;
-    border: none;
-    outline: none;
-}
-
-.searchbarinput::-webkit-input-placeholder {
-    font-size: 0.87rem;
-}
-
-.searchbarinput::-moz-placeholder {
-    font-size: 0.87rem;
-}
-
-.searchbarinput:-ms-input-placeholder {
-    font-size: 0.87rem;
-}
-
-.searchbarinput::-ms-input-placeholder {
-    font-size: 0.87rem;
-}
-
-.searchbarinput::placeholder {
-    font-size: 0.87rem;
-}
-
 .anime-container {
     /* width: 28rem; */
     padding: 0 6rem;
@@ -184,11 +162,11 @@ body::-webkit-scrollbar-thumb {
     display: -ms-flexbox;
     display: flex;
     -webkit-box-align: start;
-        -ms-flex-align: start;
-            align-items: flex-start;
+    -ms-flex-align: start;
+    align-items: flex-start;
     -webkit-box-pack: start;
-        -ms-flex-pack: start;
-            justify-content: flex-start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
     gap: 2rem;
 }
 
@@ -197,7 +175,7 @@ body::-webkit-scrollbar-thumb {
     height: 2.4rem;
     border-radius: 50%;
     -o-object-fit: cover;
-       object-fit: cover;
+    object-fit: cover;
 }
 
 #drawerImg {
@@ -211,11 +189,11 @@ body::-webkit-scrollbar-thumb {
     display: -ms-flexbox;
     display: flex;
     -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
     -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
     margin-left: -5rem;
 }
 

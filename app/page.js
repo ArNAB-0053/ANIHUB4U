@@ -1,6 +1,6 @@
 "use client"
 
-import React, { useEffect } from 'react'
+import React from 'react'
 import Indexscroll from '@/Components/Indexscroll'
 import Indexpopular from '@/Components/Indexpopular'
 import Indexupcoming from '@/Components/Indexupcoming'
