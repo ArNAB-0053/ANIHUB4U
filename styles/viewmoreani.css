@@ -1,4 +1,4 @@
-.viewmore {
+#viewmorelink {
     height: 3rem;
     position: relative;
     top: 40%;
@@ -6,9 +6,9 @@
     border-radius: 5rem;
 }
 
-.viewmore>svg {
+/* #viewmorelink>svg {
     width: 12rem;
-}
+} */
 
 #viewmorebtn {
     position: relative;
