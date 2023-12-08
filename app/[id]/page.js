@@ -84,6 +84,11 @@ const page = ({ params }) => {
         }
     };
 
+
+
+    useEffect(() => {
+        console.clear();
+      }, []);
     return (
         <div>
             <div className="mainContainer p-10 flex flex-col items-center justify-center min-h-screen text-white">

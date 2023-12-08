@@ -84,6 +84,9 @@ const Body = ({
         }
     };
 
+    useEffect(() => {
+        console.clear();
+      }, []);
     return (
         <div id='animeConID'>
             {/* Render data when anime length is greater than 0 means when data is fetched then only show view more option */}
@@ -103,10 +106,10 @@ const Body = ({
 
                     <Link id='viewmorelink' className={`bg-zinc-300 dark:bg-slate-200 ${viewMoreClassname}`} href={`/${viewmorePage}`}>
                         <button id='viewmorebtn' class="learn-more">
-                            <span class="circle bg-[#282936] dark:bg-[#5b65db]" aria-hidden="true">
-                                <span class="icon arrow"></span>
+                            <span className="circle bg-[#282936] dark:bg-[#5b65db]" aria-hidden="true">
+                                <span className="icon arrow"></span>
                             </span>
-                            <span class="button-text">View More</span>
+                            <span className="button-text">View More</span>
                         </button>
                     </Link>
                 </div>

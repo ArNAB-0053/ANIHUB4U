@@ -117,6 +117,9 @@ const Indextext = () => {
   }, []);
 
 
+  useEffect(() => {
+    console.clear();
+  }, []);
 
   return (
     <div className='ani-con'>
