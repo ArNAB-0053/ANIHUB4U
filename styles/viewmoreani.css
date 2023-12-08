@@ -25,8 +25,9 @@
 }
 
 #viewmorebtn.learn-more {
-    width: 12rem;
+    width: 10rem;
     height: auto;
+    margin: 0;
 }
 
 #viewmorebtn.learn-more .circle {
