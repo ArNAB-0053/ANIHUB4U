@@ -100,7 +100,7 @@ const Body = ({
                         </Link>
                     })}
 
-                    <Link className={`bg-zinc-300 dark:bg-slate-200 ${viewMoreClassname}`} href={`/${viewmorePage}`}>
+                    <Link className={` ${viewMoreClassname}`} href={`/${viewmorePage}`}>
                         <button id='viewmorebtn' class="learn-more">
                             <span class="circle bg-[#282936] dark:bg-[#5b65db]" aria-hidden="true">
                                 <span class="icon arrow"></span>
