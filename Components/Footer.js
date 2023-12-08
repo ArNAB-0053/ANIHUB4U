@@ -5,6 +5,7 @@ import React, { useRef, useState } from 'react'
 import '../styles/footer.css'
 import '../styles/copylink.css'
 import '../styles/footerhoverani.css'
+import '../styles/sendani.css'
 import '../app/globals.css'
 import Personalmedia from './Personalmedia';
 import {
@@ -250,7 +251,38 @@ const Footer = () => {
       </dialog>
 
       <dialog ref={contactRef} className='text-white bg-[#222222a4] dark:bg-[#3d3d3d4d] w-[70vw] h-[70vh] ml-[15vw] mt-[15vh] px-20 py-8 overflow-hidden border-[1px] border-solid border-[#ff0000aa]'>
-        <p>This is a dialog box.</p>
+        <h1 id='aboutme' className='mt-4 absolute left-1/2 top-[3rem] translate-x-[-50%] translate-y-[-50%] text-[#ff3a3a] text-[4rem]'>Contact me!</h1>
+
+        <form id='contactform' action="form" className='mt-[8.5rem] flex flex-col gap-y-6 w-[40%]'>
+          <span className='flex items-center justify-center gap-2 bg-[#454545] dark:bg-[#484848db] rounded-[5rem] h-[2.3rem] px-6 py-2 text-[#dadada]'>
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-fill" viewBox="0 0 16 16">
+              <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6" />
+            </svg>
+            <input
+              type="text"
+              placeholder='Name'
+              className='bg-[#454545] dark:bg-[#484848db] w-full h-full'
+            />
+          </span>
+
+          <span className='flex items-center justify-center gap-2 bg-[#454545] dark:bg-[#484848db] rounded-[5rem] h-[2.3rem] px-6 py-2 text-[#dadada]'>
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-envelope-fill" viewBox="0 0 16 16">
+              <path d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414.05 3.555ZM0 4.697v7.104l5.803-3.558zM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586l-1.239-.757Zm3.436-.586L16 11.801V4.697l-5.803 3.546Z" />
+            </svg>
+            <input
+              type="text"
+              placeholder='Email'
+              className='bg-[#454545] dark:bg-[#484848db] w-full h-full'
+            />
+          </span>
+
+          <textarea
+            placeholder="Message"
+            className="bg-[#505050] dark:bg-[#525252db] rounded-[1rem] h-16 px-6 py-2 resize-none"
+          />
+        </form>
+
+        {/* Cross btn */}
         <button id='cntBtn' className='bg-[#ff0000]  text-white absolute left-[95%] top-0 w-14 h-12 overflow-hidden' onClick={closeContact}>
           <Image
             src='/Images/cross.svg'
@@ -259,6 +291,35 @@ const Footer = () => {
             id='crossImg'
             className='w-[2.2rem] h-[2.2rem] pl-4'>
           </Image>
+        </button>
+
+        <Image
+          src='/Images/contact-bg.svg'
+          width="1920"
+          height="200"
+          id='contactbgImg'
+          className='absolute right-[5%] top-[10%] w-[30rem] h-[30rem]'>
+        </Image>
+
+        {/* Send btn */}
+        <button id='sendbtn'>
+          <div class="svg-wrapper-1">
+            <div class="svg-wrapper">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                width="24"
+                height="24"
+              >
+                <path fill="none" d="M0 0h24v24H0z"></path>
+                <path
+                  fill="currentColor"
+                  d="M1.946 9.315c-.522-.174-.527-.455.01-.634l19.087-6.362c.529-.176.832.12.684.638l-5.454 19.086c-.15.529-.455.547-.679.045L12 14l6-8-8 6-8.054-2.685z"
+                ></path>
+              </svg>
+            </div>
+          </div>
+          <span>Send</span>
         </button>
       </dialog>
       <div className={`whole bg-[#515151a4] dark:bg-[#3d3d3d4d] ${isBlur ? 'blured' : ''}`}></div>

@@ -228,3 +228,18 @@ dialog[open]::backdrop {
 #cause {
     font-family: HelveticaLight;
 }
+
+#contactform input::placeholder, #contactform textarea::placeholder {
+    font-size: 0.9rem;
+    font-family: HelveticaLight;
+    font-style: italic;
+    color: #dadada;
+}
+
+#contactform input:active {
+    border: none;
+}
+
+#contactform input:focus, #contactform textarea:focus {
+    outline: none;
+}
