@@ -10,7 +10,7 @@
     width: 15rem;
 }
 
-button {
+#viewmorebtn {
     position: relative;
     display: inline-block;
     cursor: pointer;
@@ -24,12 +24,12 @@ button {
     font-family: inherit;
 }
 
-button.learn-more {
+#viewmorebtn.learn-more {
     width: 12rem;
     height: auto;
 }
 
-button.learn-more .circle {
+#viewmorebtn.learn-more .circle {
     -webkit-transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
     -o-transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
     transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
@@ -41,7 +41,7 @@ button.learn-more .circle {
     border-radius: 1.625rem;
 }
 
-button.learn-more .circle .icon {
+#viewmorebtn.learn-more .circle .icon {
     -webkit-transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
     -o-transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
     transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
@@ -52,7 +52,7 @@ button.learn-more .circle .icon {
     background: #fff;
 }
 
-button.learn-more .circle .icon.arrow {
+#viewmorebtn.learn-more .circle .icon.arrow {
     -webkit-transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
     -o-transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
     transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
@@ -62,7 +62,7 @@ button.learn-more .circle .icon.arrow {
     background: none;
 }
 
-button.learn-more .circle .icon.arrow::before {
+#viewmorebtn.learn-more .circle .icon.arrow::before {
     position: absolute;
     content: "";
     top: -0.29rem;
@@ -76,7 +76,7 @@ button.learn-more .circle .icon.arrow::before {
             transform: rotate(45deg);
 }
 
-button.learn-more .button-text {
+#viewmorebtn.learn-more .button-text {
     -webkit-transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
     -o-transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
     transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
@@ -94,17 +94,17 @@ button.learn-more .button-text {
     text-transform: uppercase;
 }
 
-button:hover .circle {
+#viewmorebtn:hover .circle {
     width: 100%;
 }
 
-button:hover .circle .icon.arrow {
+#viewmorebtn:hover .circle .icon.arrow {
     background: #fff;
     -webkit-transform: translate(1rem, 0);
         -ms-transform: translate(1rem, 0);
             transform: translate(1rem, 0);
 }
 
-button:hover .button-text {
+#viewmorebtn:hover .button-text {
     color: #fff;
 }
