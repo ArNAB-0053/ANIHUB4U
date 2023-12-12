@@ -86,7 +86,8 @@ const Body = ({
 
     useEffect(() => {
         console.clear();
-      }, []);
+    }, []);
+
     return (
         <div id='animeConID'>
             {/* Render data when anime length is greater than 0 means when data is fetched then only show view more option */}

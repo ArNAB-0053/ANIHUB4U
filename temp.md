@@ -1,52 +1,9 @@
-<ul id='perLink' className='flex gap-2 items-center justify-start mt-1'>
-            {/* whatsapp */}
-            <li className='w-10 h-10 '>
-                <WhatsappShareButton
-                    url={`https://wa.me/624767878`}
-                    title={'next-share is a social share buttons for your next React apps.'}
-                >
-                    <WhatsappIcon className='w-10 h-10 scale-90 hover:scale-110' round />
-                </WhatsappShareButton>
-            </li>
+<svg height="32" width="32" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path clip-rule="evenodd" d="M9.528 1.718a.75.75 0 01.162.819A8.97 8.97 0 009 6a9 9 0 009 9 8.97 8.97 0 003.463-.69.75.75 0 01.981.98 10.503 10.503 0 01-9.694 6.46c-5.799 0-10.5-4.701-10.5-10.5 0-4.368 2.667-8.112 6.46-9.694a.75.75 0 01.818.162z" fill-rule="evenodd"></path>
+                    </svg>
 
-            {/* {Facebook} */}
-            <li className='w-10 h-10 '>
-                <FacebookShareButton
-                    url={'https://www.facebook.com/arnab.bhattacharyya.520'}
-                    quote={'next-share is a social share buttons for your next React apps.'}
-                >
-                    <FacebookIcon className='w-10 h-10 scale-90 hover:scale-110' round />
-                </FacebookShareButton>
-            </li>
 
-            {/* Twitter */}
-            <li className='w-10 h-10 '>
-                <TwitterShareButton
-                    url={'https://twitter.com/Arnab19_12_2002'}
-                    title={'next-share is a social share buttons for your next React apps.'}
-                >
-                    <TwitterIcon className='w-10 h-10 scale-90 hover:scale-110' round />
-                </TwitterShareButton>
-            </li>
 
-            {/* Linkedin */}
-            <li>
-                <LinkedinShareButton url={'https://www.linkedin.com/in/arnab-bhattacharyya-380966291/'}>
-                    <LinkedinIcon className='w-10 h-10 scale-90 hover:scale-110' round />
-                </LinkedinShareButton>
-            </li>
-
-            {/* Instagram */}
-            <li>
-                <Link href="https://www.instagram.com/__arnab_bhattacharyya/" target="_blank" rel="noopener noreferrer">
-                    <InstagramIcon className='w-10 h-10 scale-90 hover:scale-110' round />
-                </Link>
-            </li>
-
-            {/* Github */}
-            <li>
-                <Link href="https://github.com/ArNAB-0053">
-                    <GithubIcon className='w-10 h-10 scale-90 hover:scale-110 dark:invert' round />
-                </Link>
-            </li>
-        </ul>
+                    <svg height="32" width="32" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12 2.25a.75.75 0 01.75.75v2.25a.75.75 0 01-1.5 0V3a.75.75 0 01.75-.75zM7.5 12a4.5 4.5 0 119 0 4.5 4.5 0 01-9 0zM18.894 6.166a.75.75 0 00-1.06-1.06l-1.591 1.59a.75.75 0 101.06 1.061l1.591-1.59zM21.75 12a.75.75 0 01-.75.75h-2.25a.75.75 0 010-1.5H21a.75.75 0 01.75.75zM17.834 18.894a.75.75 0 001.06-1.06l-1.59-1.591a.75.75 0 10-1.061 1.06l1.59 1.591zM12 18a.75.75 0 01.75.75V21a.75.75 0 01-1.5 0v-2.25A.75.75 0 0112 18zM7.758 17.303a.75.75 0 00-1.061-1.06l-1.591 1.59a.75.75 0 001.06 1.061l1.591-1.59zM6 12a.75.75 0 01-.75.75H3a.75.75 0 010-1.5h2.25A.75.75 0 016 12zM6.697 7.757a.75.75 0 001.06-1.06l-1.59-1.591a.75.75 0 00-1.061 1.06l1.59 1.591z"></path>
+                    </svg>

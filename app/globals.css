@@ -176,28 +176,11 @@ body::-webkit-scrollbar-thumb {
     border-radius: 50%;
     -o-object-fit: cover;
     object-fit: cover;
+    aspect-ratio: 1/1;
 }
 
 #drawerImg {
     width: 1.3rem;
     height: 1.3rem;
     /* filter: invert(100%) grayscale(100%); */
-}
-
-.mode {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-    margin-left: -5rem;
-}
-
-.mode button svg {
-    width: 1.5rem;
-    height: 1.5rem;
 }

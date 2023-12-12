@@ -131,13 +131,10 @@
 }
 
 .staffs {
-    width: 81vw;
+    width: 80vw;
     margin-left: 0;
 }
 
-/* #staffimg {
-    width: 10rem;
-    height: 10rem;
-    border-radius: 50%;
-    object-fit: cover;
-} */
+#recomimg {
+    transition: all 0.5s ease;
+}

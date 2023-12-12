@@ -7,6 +7,7 @@ import Drawer from './Drawer'
 import Profile from './Profile'
 import Mode from './Mode'
 import { ThemeProvider } from 'next-themes'
+import '../styles/mode.css'
 
 
 const Header = () => {
