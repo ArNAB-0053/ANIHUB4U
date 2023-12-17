@@ -7,9 +7,9 @@ const page = () => {
       <div className=''>
         <Body
           baseURL="https://api.jikan.moe/v4"
-          endpoint="random/anime"
+          endpoint="anime?q=${search}&order_by=title&sort=asc&limit=10"
           titleClass='w-64'
-         />
+        />
       </div>
     </div>
   )

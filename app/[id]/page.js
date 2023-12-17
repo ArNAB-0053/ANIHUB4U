@@ -104,23 +104,18 @@ const page = ({ params }) => {
         try {
             const response = await axios.get(`https://api.jikan.moe/v4/anime/${animeID}/recommendations`);
             const data = response.data;
-            // Update staffs state with the new data
-            const maxLength = data.data.length;
             setRecommendation(data.data.slice(0, newNumRecommendation));
-            console.log("length", data.data.length)
-            return maxLength;
         }
 
         catch (error) {
             console.log(error);
-            return 0;
         }
     };
 
 
-    useEffect(() => {
-        console.clear();
-    }, []);
+    // useEffect(() => {
+    //     console.clear();
+    // }, []);
     return (
         <div>
             <div className="mainContainer p-10 flex flex-col items-center justify-center min-h-screen text-white">
@@ -266,19 +261,19 @@ const page = ({ params }) => {
                 {/* Recommendations */}
                 {recommendation.length > 0 ? (
                     <div className="recomContainer w-[79vw] mt-6">
-                        <h1 id="staffhead" className="title  text-black dark:text-white mt-10">Recommendations</h1>
+                        <h1 id="staffhead" className="title  text-black dark:text-white mt-10">Recommended for you</h1>
                         <div id="linestaff" className=" bg-zinc-800 dark:bg-white w-full"></div>
                         <div className="recommendation w-full ml-0 grid grid-cols-6 gap-x-4 grid-rows-auto items-center justify-items-center mt-10">
                             {recommendation.map((anime, i) => {
-                                return <div className="w-[100%] h-[100%] flex items-center justify-center flex-col my-6" >
+                                return <Link href={`/${anime.entry.mal_id}`} className="w-[100%] h-[100%] flex items-center justify-center flex-col my-6" >
                                     <img
                                         key={i}
-                                        src={anime.entry.images.jpg.large_image_url} alt={anime.title}
+                                        src={anime.entry.images.jpg.large_image_url} alt={anime.entry.title}
                                         className={`object-cover block ml-1 w-[12vw] h-[36vh] scale-100 mb-2 hover:scale-110 rounded-xl`}
                                         id='recomimg'
                                     />
                                     <h1 className={`text-black dark:text-white  mt-[-0.2rem] text-sm tracking-normal leading-4 text-center font-bold py-2 px-8 whitespace-nowrap overflow-hidden overflow-ellipsis w-48`}>{anime.entry.title}</h1>
-                                </div>
+                                </Link>
                             })}
                         </div>
 

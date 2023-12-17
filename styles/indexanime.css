@@ -6,20 +6,20 @@
     grid-auto-flow: column;
     grid-auto-columns: auto;
     -ms-scroll-snap-type: x mandatory;
-        scroll-snap-type: x mandatory;
+    scroll-snap-type: x mandatory;
     scroll-behavior: smooth;
     -webkit-box-pack: start;
-        -ms-flex-pack: start;
-            justify-content: start;
+    -ms-flex-pack: start;
+    justify-content: start;
     -ms-flex-line-pack: start;
-        align-content: start;
-        position: relative;
-        padding: 0;
-        width: 87.5vw;
-        margin-left: -1.5vw;
-        box-shadow: none;
-        border: none;
-        /* background: #000; */
+    align-content: start;
+    position: relative;
+    padding: 0;
+    width: 87.5vw;
+    margin-left: -1.5vw;
+    box-shadow: none;
+    border: none;
+    /* background: #000; */
 }
 
 .index-anime-content>* {
@@ -54,33 +54,74 @@
     justify-content: center;
 }
 
-.scroll-left{
+.scroll-left {
     -webkit-transform: rotate(180deg);
-        -ms-transform: rotate(180deg);
-            transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    transform: rotate(180deg);
     left: 6vw;
 }
 
-.scroll-right{
+.scroll-right {
     right: 4vw;
 }
 
-#nxtimg, #previmg {
+#nxtimg,
+#previmg {
     -webkit-filter: invert(100%) grayscale(100%);
-            filter: invert(100%) grayscale(100%);
+    filter: invert(100%) grayscale(100%);
     width: 5rem;
 }
 
 #animeimg {
     -webkit-box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-    -webkit-transition: all 0.25s ease;
-    -o-transition: all 0.25s ease;
-    transition: all 0.25s ease;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    -webkit-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
 }
 
 #animeheading {
     font-family: FuturaNowHeadlineExtraBold;
     font-size: 2rem;
     text-transform: uppercase;
+}
+
+#linkcontainer {
+    overflow: hidden;
+}
+
+#linkcontainer #info {
+    display: none;
+    position: absolute;
+    flex-direction: column;
+    left: 0;
+    padding: 2rem 1rem 1rem 1rem;
+    z-index: 9999;
+}
+
+#linkcontainer:hover #info {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    animation: upAnimation 0.7s forwards ease;
+}
+
+#linkcontainer:hover #animeimg {
+ scale: 1.1;
+ box-shadow: none;
+}
+
+@keyframes upAnimation {
+    0% {
+        bottom: -30%;
+        opacity: 0;
+    }
+
+    100% {
+        bottom: 0;
+        opacity: 1;
+    }
 }

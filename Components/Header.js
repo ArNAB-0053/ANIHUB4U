@@ -11,6 +11,7 @@ import '../styles/mode.css'
 
 
 const Header = () => {
+
   const [isFixed, setIsFixed] = useState(false);
   const scrollThreshold = 20;
 
@@ -43,15 +44,20 @@ const Header = () => {
                 className='logo'>
               </Image>
             </Link>
-            <Searchbar />
+            <Searchbar style="hidden"/>
           </div>
           <div className="anime-container">
-            <Link className='animes text-black dark:text-white ' href="/Populer">Populer Anime</Link>
-            <Link className='animes text-black dark:text-white' href="/Airing">Airing Anime</Link>
-            <Link className='animes text-black dark:text-white' href="/Upcoming">Upcoming Anime</Link>
+            {/* <Language/> */}
+            {/* <button > EN </button>
+            <button > JP </button> */}
+            <Link className='animes text-black dark:text-white font-semibold' id='by' href="/Populer">Popular</Link>
+            <Link className='animes text-black dark:text-white font-semibold' id='by' href="/Airing">Airing</Link>
+            <Link className='animes text-black dark:text-white font-semibold' id='by' href="/Upcoming">Upcoming</Link>
           </div>
-          <Mode />
-          <Profile />
+          <div className='flex items-center justify-end gap-4'>
+            <Mode />
+            <Profile />
+          </div>
         </header>
       </div>
     </ThemeProvider>

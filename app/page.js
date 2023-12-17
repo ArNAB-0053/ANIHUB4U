@@ -7,9 +7,9 @@ import Indexairing from '@/Components/Indexairing'
 import { ThemeProvider } from 'next-themes'
 
 const page = () => {
-  useEffect(() => {
-    console.clear();
-  }, []);
+  // useEffect(() => {
+  //   console.clear();
+  // }, []);
   return (
     <ThemeProvider attribute="class">
       <Indexscroll />

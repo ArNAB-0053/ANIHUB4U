@@ -108,18 +108,18 @@ const Indextext = () => {
       handleScrollRight();
     }, 10000);
     duplicate();
-    
+
     return () => {
       clearInterval(scrollRightInterval);
     };
 
-    
+
   }, []);
 
 
-  useEffect(() => {
-    console.clear();
-  }, []);
+  // useEffect(() => {
+  //   console.clear();
+  // }, []);
 
   return (
     <div className='ani-con'>
@@ -128,8 +128,10 @@ const Indextext = () => {
         <div className='animeItem flex items-center justify-between' id='naruto'>
           <div className="texts text-white z-10 px-8 pt-40">
             <h1 className='mt-16'>Naruto</h1>
-            <h2 className='w-5/6'>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est numquam sed voluptate nemo maiores nam reprehenderit blanditiis tempore nisi, accusamus at voluptatibus in eius nihil, dolore minima. Mollitia, recusandae reiciendis suscipit quo repellat dolore!</h2>
-            <button className='bg-zinc-100 text-black px-12 py-2 mt-8 rounded-full'>Details</button>
+            <h2 className='w-5/6'>Moments prior to Naruto Uzumaki's birth, a huge demon known as the Kyuubi, the Nine-Tailed Fox, attacked Konohagakure, the Hidden Leaf Village, and wreaked havoc. In order to put an end to the Kyuubi's rampage, the leader of the ...</h2>
+            <button className='bg-zinc-100 text-black px-12 py-2 mt-8 rounded-full'>
+              <Link href='./20'>Details</Link>
+            </button>
           </div>
           <div className="indexImgContainer flex justify-end mr-20">
             <Image
@@ -145,9 +147,9 @@ const Indextext = () => {
         <div className='animeItem flex items-center justify-between' id='AOT'>
           <div className="texts text-white z-10 px-8 pt-40">
             <h1 className='mt-16' id='aot-head'>Attack On Titan</h1>
-            <h2 className='w-5/6'>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est numquam sed voluptate nemo maiores nam reprehenderit blanditiis tempore nisi, accusamus at voluptatibus in eius nihil, dolore minima. Mollitia, recusandae reiciendis suscipit quo repellat dolore!</h2>
+            <h2 className='w-5/6'>Centuries ago, mankind was slaughtered to near extinction by monstrous humanoid creatures called Titans, forcing humans to hide in fear behind enormous concentric walls. What makes these giants truly terrifying is that their taste ...</h2>
             <button className='bg-zinc-100 text-black px-12 py-2 mt-8 rounded-full'>
-              <Link href="/id">Details</Link>
+              <Link href='./16498'>Details</Link>
             </button>
           </div>
           <div className="indexImgContainer flex justify-end mr-20">
@@ -164,8 +166,10 @@ const Indextext = () => {
         <div className='animeItem flex items-center justify-between' id='OP'>
           <div className="texts text-white z-10 px-8 pt-40">
             <h1 className='mt-16'>One Piece</h1>
-            <h2 className='w-5/6'>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est numquam sed voluptate nemo maiores nam reprehenderit blanditiis tempore nisi, accusamus at voluptatibus in eius nihil, dolore minima. Mollitia, recusandae reiciendis suscipit quo repellat dolore!</h2>
-            <button className='bg-zinc-100 text-black px-12 py-2 mt-8 rounded-full'>Details</button>
+            <h2 className='w-5/6'>Barely surviving in a barrel after passing through a terrible whirlpool at sea, carefree Monkey D. Luffy ends up aboard a ship under attack by fearsome pirates. Despite being a naive-looking teenager, he is not to be underestimated...</h2>
+            <button className='bg-zinc-100 text-black px-12 py-2 mt-8 rounded-full'>
+            <Link href='./21'>Details</Link>
+            </button>
           </div>
           <div className="indexImgContainer flex justify-end mr-20">
             <Image
@@ -181,9 +185,9 @@ const Indextext = () => {
         <div className='animeItem flex items-center justify-between' id='DS'>
           <div className="texts text-white z-10 px-8 pt-40">
             <h1 className='mt-16' id='ds-head'>Demon Slayer</h1>
-            <h2 className='w-5/6'>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est numquam sed voluptate nemo maiores nam reprehenderit blanditiis tempore nisi, accusamus at voluptatibus in eius nihil, dolore minima. Mollitia, recusandae reiciendis suscipit quo repellat dolore!</h2>
+            <h2 className='w-5/6'>Ever since the death of his father, the burden of supporting the family has fallen upon Tanjirou Kamado's shoulders. Though living impoverished on a remote mountain, the Kamado family are able to enjoy a relatively peaceful and happy ...</h2>
             <button className='bg-zinc-100 text-black px-12 py-2 mt-8 rounded-full'>
-              <Link href='https://api.jikan.moe/v4/anime/20'>Details</Link>
+              <Link href='./38000'>Details</Link>
             </button>
           </div>
           <div className="indexImgContainer flex justify-end mr-20">
@@ -201,8 +205,10 @@ const Indextext = () => {
         <div className='animeItem flex items-center justify-between' id='HH'>
           <div className="texts text-white z-10 px-8 pt-40">
             <h1 className='mt-16' id='hh-head'>Hunter X Hunter</h1>
-            <h2 className='w-5/6'>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est numquam sed voluptate nemo maiores nam reprehenderit blanditiis tempore nisi, accusamus at voluptatibus in eius nihil, dolore minima. Mollitia, recusandae reiciendis suscipit quo repellat dolore!</h2>
-            <button className='bg-zinc-100 text-black px-12 py-2 mt-8 rounded-full'>Details</button>
+            <h2 className='w-5/6'>Hunters devote themselves to accomplishing hazardous tasks, all from traversing the world's uncharted territories to locating rare items and monsters. Before becoming a Hunter, one must pass the Hunter Examination—a high-risk...</h2>
+            <button className='bg-zinc-100 text-black px-12 py-2 mt-8 rounded-full'>
+              <Link href='./11061'>Details</Link>
+            </button>
           </div>
           <div className="indexImgContainer flex justify-end mr-20">
             <Image

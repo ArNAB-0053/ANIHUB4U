@@ -14,7 +14,7 @@ export default function RootLayout({ children }) {
   console.clear();
   return (
     <html lang="en">
-      <body className={`bg-[#EEEEEE] dark:bg-[#242428] ${inter.className}`}>
+      <body className={`bg-[#f4f4f4] dark:bg-[#1d1d1f] ${inter.className} `}>
         <NextTopLoader color="#ff0000" />
         <Header />
         {children}

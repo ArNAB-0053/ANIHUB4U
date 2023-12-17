@@ -37,20 +37,27 @@
 }
 
 .texts>h1 {
-    font-family: FuturaNowHeadlineExtraBold;
+    font-family: 'Montserrat', FuturaNowHeadlineExtraBold, sans-serif;
+    font-weight: 900;
     font-size: 5rem;
     margin-left: -0.3rem;
+    letter-spacing: -0.2rem;
 }
 
 .texts>h2 {
-    font-family: HelveticaMedium;
-    font-size: 1rem;
+    font-family: 'Montserrat', HelveticaLight, sans-serif;
+    font-weight: 400;
+    font-size: 0.8rem;
+    line-height: 1rem;
 }
 
 #aot-head,
-#hh-head,
 #ds-head {
     font-size: 4rem;
+}
+
+#hh-head {
+    font-size: 3.8rem;
 }
 
 .animeHome {
@@ -143,10 +150,8 @@
 }
 
 .animeItem {
-    -webkit-mask: -webkit-gradient(linear, left top, left bottom, color-stop(10%, transparent), color-stop(40%, white));
-    -webkit-mask: linear-gradient(180deg, transparent 10%, white 40%);
-    mask: -webkit-gradient(linear, left top, left bottom, color-stop(10%, transparent), color-stop(40%, white));
-    mask: linear-gradient(180deg, transparent 10%, white 40%);
+    mask: -webkit-gradient(linear, left top, left bottom, color-stop(10%, transparent), color-stop(40%, #575757));
+    mask: linear-gradient(180deg, transparent 10%, #1c1c1c 40%);
     /* animation: scroll 20s linear infinite; */
     padding: 0 2rem;
 }

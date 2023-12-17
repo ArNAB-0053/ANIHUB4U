@@ -2,9 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
-nextjs-portal {
+/* nextjs-portal {
     display: none;
-}
+} */
+
+@import url('https://fonts.googleapis.com/css2?family=Goldman&family=Mooli&display=swap');
 
 @font-face {
     font-family: FuturaNowHeadlineExtraBold;
@@ -156,8 +158,6 @@ body::-webkit-scrollbar-thumb {
 }
 
 .anime-container {
-    /* width: 28rem; */
-    padding: 0 6rem;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -168,6 +168,11 @@ body::-webkit-scrollbar-thumb {
     -ms-flex-pack: start;
     justify-content: flex-start;
     gap: 2rem;
+}
+
+#by {
+    font-family: 'Mooli', sans-serif;
+    text-transform: uppercase;
 }
 
 #profileImg {
@@ -183,4 +188,9 @@ body::-webkit-scrollbar-thumb {
     width: 1.3rem;
     height: 1.3rem;
     /* filter: invert(100%) grayscale(100%); */
+}
+
+::selection {
+    background-color: red;
+    color: white;
 }
