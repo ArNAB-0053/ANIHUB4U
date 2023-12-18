@@ -29,6 +29,7 @@ const Indexbody = ({ starting = "https://api.jikan.moe/v4", ending, animeHeading
                 alltxt='text-[0.65rem]'
                 jpTitle='text-[0.4rem]'
                 wh='8'
+                ratingStyle='top-2 right-2 rounded-sm'
             />
         </div>
     )

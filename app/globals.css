@@ -6,7 +6,7 @@
     display: none;
 } */
 
-@import url('https://fonts.googleapis.com/css2?family=Goldman&family=Mooli&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Goldman&family=Montserrat:wght@900&family=Mooli&family=Poppins:wght@900&display=swap');
 
 @font-face {
     font-family: FuturaNowHeadlineExtraBold;
@@ -193,4 +193,34 @@ body::-webkit-scrollbar-thumb {
 ::selection {
     background-color: red;
     color: white;
+}
+
+#rank {
+    font-family: 'Goldman', sans-serif;
+}
+
+#top5 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 800;
+}
+
+#headindtype {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 800;
+}
+
+#spinner {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: conic-gradient(#0000 10%, #ff0000);
+    -webkit-mask: radial-gradient(farthest-side, #0000 calc(100% - 9px), #000 0);
+    animation: spinner-zp9dbg 1s infinite linear;
+    z-index: 9999999999999;
+}
+
+@keyframes spinner-zp9dbg {
+    to {
+        transform: rotate(1turn);
+    }
 }

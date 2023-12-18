@@ -1,18 +1,13 @@
-import Body from '@/Components/Body'
+import Toptenholder from '@/Components/Toptenholder'
 import React from 'react'
 
 const page = () => {
   return (
-    <div>
-      <div className=''>
-        <Body
-          baseURL="https://api.jikan.moe/v4"
-          endpoint="top/anime?filter=airing" 
-          titleClass='w-64'
-        />
-          
-      </div>
-    </div>
+    <Toptenholder
+      baseURL="https://api.jikan.moe/v4"
+      endpoint="top/anime?filter=airing"
+      type='Airing'
+    />
   )
 }
 
