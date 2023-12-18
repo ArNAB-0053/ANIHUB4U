@@ -1,30 +1,10 @@
-.container {
-    height: 80vh;
-}
-
-.imageContainer {
-    background: #000;
-    height: 60vh;
-    width: 22vw;
-    border-radius: 2rem;
-    margin-top: 3rem;
-    margin-left: 2rem;
-}
-
-.imageContainer>img {
-    width: 100%;
-    height: 100%;
-    -o-object-fit: cover;
-    object-fit: cover;
-}
-
 .animeDetails {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
 }
 
-.__animeDetails {
+.__animeDetails, .details {
     -webkit-backdrop-filter: blur(36px);
     backdrop-filter: blur(36px);
 }
@@ -38,34 +18,6 @@
 .title {
     font-size: 3rem;
     margin-bottom: 1rem;
-}
-
-.titleHead {
-    font-size: 3.5rem;
-    margin-top: 2rem;
-    margin-bottom: 1rem;
-}
-
-.details {
-    width: 48vw;
-}
-
-.detailDesc {
-    margin-left: 2rem;
-    margin-right: 2rem;
-    margin-top: 2rem;
-}
-
-.detailDesc>span {
-    font-family: HelveticaBold;
-    font-size: 1.3rem;
-    margin-top: 0.5rem;
-}
-
-.description {
-    margin-top: -4rem;
-    font-family: HelveticaLight;
-    font-size: 1rem;
 }
 
 .description>button {
@@ -83,14 +35,6 @@
     width: 100%;
 }
 
-.trailer {
-    width: 81vw;
-}
-
-.characterContainer {
-    width: 80vw;
-}
-
 .characterContainer>h1 {
     margin-bottom: -0.3rem;
 }
@@ -98,11 +42,6 @@
 #charstaff {
     height: 0.05rem;
     margin-bottom: 1rem;
-}
-
-.characters {
-    width: 81vw;
-    margin-left: -0.5vw;
 }
 
 .char-name,
@@ -119,14 +58,6 @@
     transition: all 0.25s ease;
 }
 
-.char-name {
-    font-size: 1rem;
-}
-
-.staffContainer {
-    width: 80vw;
-}
-
 #staffhead {
     margin-bottom: -2px;
 }
@@ -136,11 +67,24 @@
     height: 0.05rem;
 }
 
-.staffs {
-    width: 80vw;
-    margin-left: 0;
-}
-
 #recomimg {
     transition: all 0.5s ease;
+}
+
+#rank {
+    font-family: 'Goldman';
+}
+
+#genre {
+    border-radius: 0.4rem;
+    padding: 0.3rem 1rem;
+    margin: 0 0.2rem;
+    font-size: 0.7rem;
+}
+
+#desc {
+    font-family: 'Poppins', sans-serif;
+    line-height: 19.5px;
+    letter-spacing: normal;
+    word-spacing: 0px;
 }
