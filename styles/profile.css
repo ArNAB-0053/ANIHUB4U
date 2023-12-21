@@ -1,0 +1,220 @@
+dialog {
+    -webkit-backdrop-filter: blur(13px);
+    backdrop-filter: blur(13px);
+    border-radius: 1rem;
+}
+
+/*   Open state of the dialog  */
+dialog[open] {
+    opacity: 1;
+    transform: scaleY(1);
+}
+
+/*   Closed state of the dialog   */
+dialog {
+    opacity: 0;
+    transform: scaleY(0);
+    transition:
+        opacity 0.7s ease-out,
+        transform 0.7s ease-out,
+        overlay 0.7s ease-out allow-discrete,
+        display 0.7s ease-out allow-discrete;
+    /* Equivalent to
+    transition: all 0.7s allow-discrete; */
+}
+
+/*   Before-open state  */
+/* Needs to be after the previous dialog[open] rule to take effect,
+      as the specificity is the same */
+@starting-style {
+    dialog[open] {
+        opacity: 0;
+        transform: scaleY(0);
+    }
+}
+
+/* Transition the :backdrop when the dialog modal is promoted to the top layer */
+dialog::backdrop {
+    background-color: rgb(0 0 0 / 0);
+    transition:
+        display 0.7s allow-discrete,
+        overlay 0.7s allow-discrete,
+        background-color 0.7s;
+    /* Equivalent to
+    transition: all 0.7s allow-discrete; */
+}
+
+dialog[open]::backdrop {
+    background-color: rgb(0 0 0 / 0.25);
+}
+
+/* This starting-style rule cannot be nested inside the above selector
+  because the nesting selector cannot represent pseudo-elements. */
+
+@starting-style {
+    dialog[open]::backdrop {
+        background-color: rgb(0 0 0 / 0);
+    }
+}
+
+.whole {
+    position: absolute;
+    left: 50%;
+    top: -120vh;
+    transform: translate(-50%, -50%);
+    -webkit-backdrop-filter: blur(5px);
+    backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    opacity: 1;
+    width: 100vw;
+    z-index: 999;
+    transition: all 0.5s ease;
+    color: #fff;
+}
+
+#authform input::placeholder,
+#authform textarea::placeholder {
+    font-size: 0.9rem;
+    font-family: HelveticaLight;
+    font-style: italic;
+    color: #dadada;
+}
+
+#authform input:active {
+    border: none;
+}
+
+#authform input:focus,
+#authform textarea:focus {
+    outline: none;
+}
+
+#authhead,
+#newhere {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 900;
+}
+
+.google,
+.facebook,
+.github {
+    border-radius: 0.5rem;
+    padding: 0.5rem 1rem;
+    background: #3d3d3d;
+    box-shadow: 22px 22px 32px #343434,
+        -22px -22px 32px #464646;
+    font-size: 0.9rem;
+    color: #d0d0d0;
+    transition: all 0.2s ease;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.google>svg {
+    color: #f0ad03;
+}
+
+.facebook>svg {
+    color: royalblue;
+}
+
+#loginbtn {
+    border-radius: 0.5rem;
+    padding: 0.5rem 1rem;
+    width: 10rem;
+    border-radius: 59px;
+    border: 2px solid red;
+    color: #ff0000;
+    transition: all 0.4s ease;
+    font-family: 'Montserrat', sans-serif;
+}
+
+#loginbtn:hover {
+    background: #ff0000;
+    box-shadow: 20px 25px 70px #e00000ac,
+        -20px -25px 70px #ff00004e;
+    color: white;
+    font-weight: 900;
+}
+
+.google:hover {
+    background: #f0ad03;
+    box-shadow: 20px 25px 70px #f0ad03ac,
+        -20px -25px 70px #f0ad034e;
+    font-weight: 900;
+    color: #fff;
+}
+
+.google:hover.google>svg {
+    color: white;
+}
+
+.facebook:hover {
+    background: #4169e1;
+    box-shadow: 20px 25px 70px #4169e1ac,
+        -20px -25px 70px #4169e14e;
+    font-weight: 900;
+    color: #fff;
+}
+
+.facebook:hover.facebook>svg {
+    color: white;
+}
+
+.github:hover {
+    background: #000000;
+    box-shadow: 20px 25px 70px #000000ac,
+        -20px -25px 70px #0000004e;
+    font-weight: 900;
+    color: #fff;
+}
+
+.github:hover.github>svg {
+    color: white;
+}
+
+#authbgImg {
+    -webkit-mask: linear-gradient(0deg, transparent 0%, #000000a9 70%);
+    mask: linear-gradient(0deg, transparent 0%, #000000a9 70%);
+}
+
+.signupbtn {
+    width: 9rem;
+    font-size: 0.9rem;
+    transition: all 0.2s ease;
+    background: #4d9d5a;
+    color: #fff;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+}
+
+.signupbtn:hover {
+    background: #4d9d5a;
+    box-shadow: 20px 25px 70px #4d9d5aac,
+        -20px -25px 70px #4d9d5a4e;
+    font-weight: 900;
+}
+
+#signupdiv span:hover, #authform span:hover {
+    background: #646464d0;
+}
+
+#signupdiv span:active {
+    border: 2px solid #484848d0;
+}
+
+/* #authbtn {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    transition: all 0.4s ease;
+    text-transform: uppercase;
+}
+
+#authbtn:hover {
+    background: #900000;
+    font-weight: 900;
+}
+
+#authbtn:active {
+    border: 2px solid #900000;
+} */
+

@@ -3,7 +3,6 @@ import React, { useEffect, useRef, useState } from 'react';
 import axios from 'axios';
 import Link from 'next/link';
 import '../styles/indexanime.css'
-import '../styles/viewmoreani.css'
 import Image from 'next/image'
 import Rank from './Rank';
 // import { ThemeProvider } from 'next-themes'
@@ -21,8 +20,6 @@ const Body = ({
     styleMargin = "",
     titleClass = "text-center",
     btnClassname = 'hidden',
-    viewMoreClassname = 'hidden',
-    viewmorePage = '',
     styleinfo = 'w-[100%] h-[80%] rounded rounded-t-[3rem] overflow-hidden',
     titletxt = 'text-sm leading-4',
     synopsistxt = 'text-[0.7rem]',
@@ -121,6 +118,22 @@ const Body = ({
         }
     };
 
+    // Helper function to calculate duration in minutes
+    const calculateDuration = (duration) => {
+        const parts = duration.split(' ');
+
+        if (parts.length === 4 && parts[3] === 'min') {
+            // If both hours and minutes, calculate and return in minutes
+            const hoursInMinutes = parseInt(parts[0]) * 60;
+            const totalMinutes = hoursInMinutes + parseInt(parts[2]);
+            return totalMinutes + ' m';
+        } else {
+            // If format is not recognized, return the original value
+            return duration;
+        }
+    };
+
+
     // useEffect(() => {
     //     console.clear();
     // }, []);
@@ -190,9 +203,12 @@ const Body = ({
                                                 </div>
                                                 <div className='bg-green-600 py-1 px-2 w-[34%] text-center rounded-r-xl'>
                                                     {anime.duration !== 'Unknown' && anime.duration !== null
-                                                        ? anime.duration && anime.duration.slice().replace(" ", "").substring(0, 6)
+                                                        ?  calculateDuration(anime.duration.replace('min per ep', ' m'))
                                                         : 'N/A'}
                                                 </div>
+
+
+
                                             </div>
                                             <div className={`w-full text-start leading-3 ${synopsistxt} text-[#3d3d3d] dark:text-[#dadadae1]`}>
                                                 {anime.synopsis && anime.synopsis.substring(0, 100) + '...'}
@@ -247,17 +263,6 @@ const Body = ({
 
                             </Link>
                         })}
-
-
-
-                        <Link id='viewmorelink' className={`bg-zinc-300 dark:bg-slate-200 ${viewMoreClassname}`} href={`/${viewmorePage}`}>
-                            <button id='viewmorebtn' class="learn-more">
-                                <span className="circle bg-[#282936] dark:bg-[#5b65db]" aria-hidden="true">
-                                    <span className="icon arrow"></span>
-                                </span>
-                                <span className="button-text">View More</span>
-                            </button>
-                        </Link>
                     </div>
                 )
             )}

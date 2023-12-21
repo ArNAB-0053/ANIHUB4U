@@ -58,12 +58,24 @@
     -webkit-transform: rotate(180deg);
     -ms-transform: rotate(180deg);
     transform: rotate(180deg);
-    left: 6vw;
+    left: 5.5vw;
+    
 }
 
 .scroll-right {
     right: 4vw;
 }
+
+.scroll-left:hover, .scroll-right:hover {
+    animation: arrowHover 0.5s ease forwards;
+}
+
+@keyframes arrowHover {
+    100% {
+        background: #ffffff4d;
+    }
+}
+
 
 #nxtimg,
 #previmg {

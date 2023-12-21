@@ -39,7 +39,6 @@
 .texts>h1 {
     font-family: 'Montserrat', FuturaNowHeadlineExtraBold, sans-serif;
     font-weight: 900;
-    font-size: 5rem;
     margin-left: -0.3rem;
     letter-spacing: -0.2rem;
 }
@@ -49,15 +48,6 @@
     font-weight: 400;
     font-size: 0.8rem;
     line-height: 1rem;
-}
-
-#aot-head,
-#ds-head {
-    font-size: 4rem;
-}
-
-#hh-head {
-    font-size: 3.8rem;
 }
 
 .animeHome {
@@ -193,6 +183,15 @@
         -ms-flex-pack: center;
             justify-content: center;
     color: #fff;
+    transition: all 0.2s ease;
+}
+
+.scroll-btn:hover {
+    background: #1c1c1c71;
+}
+
+.scroll-btn:active {
+    background: #1c1c1c;
 }
 
 #scrollRight {

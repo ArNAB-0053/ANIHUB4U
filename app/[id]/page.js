@@ -164,12 +164,15 @@ const page = ({ params }) => {
                     bg-[url('/Images/TG/1.jpg')]">
                         <div className="__animeDetails dark:bg-[#4e4e51c6] bg-[#dadadac4] w-[70%] px-12 h-full">
                             <div className="flex items-start justify-start gap-x-12 px-6 py-16">
-                                <div className="w-[12rem] h-[18rem] bg-black">
+                                <div className="w-[12rem] h-[18rem]">
                                     <img className="rounded-xl object-cover w-full h-full" src={images?.jpg.large_image_url} alt="" />
                                 </div>
                                 <div className="w-[70%] h-[70vh] text-[0.8rem] ">
-                                    <h2 id="rank" className="text-lg dark:text-white text-black"># {anime.rank}</h2>
-                                    <h1 className="titleHead text-[3rem] text-black dark:text-white text-start">{title}</h1>
+                                    <h2 id="rank" className="m-2 text-lg dark:text-red-500 text-white px-2 dark:bg-[#ffffff] bg-[#3D30CB] w-[5rem] flex  items-center justify-center gap-2 rounded-full">
+                                        <p>#</p>
+                                        {anime.rank}
+                                    </h2>
+                                    <h1 className="titleHead text-[3rem] text-black dark:text-white text-start leading-[2.9rem] mt-6 mb-8">{anime.title_english !== null ? anime.title_english : anime.title}</h1>
                                     <div className="flex items-center justify-start gap-2 text-[1rem] my-4">
                                         <span className="flex items-center justify-center gap-2 bg-blue-500 px-2 w-20 h-8 rounded-l-[0.3rem]">
                                             <svg
@@ -177,7 +180,7 @@ const page = ({ params }) => {
                                                 width={36}
                                                 height={36}
                                                 fill="currentColor"
-                                                className="bi bi-star-fill text-yellow-400 w-4"
+                                                className="bi bi-star-fill text-yellow-300 w-4"
                                                 viewBox="0 0 16 16">
                                                 <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
                                             </svg>
@@ -185,7 +188,7 @@ const page = ({ params }) => {
                                                 ? score
                                                 : 'N/A'}
                                         </span>
-                                        <span className="flex items-center justify-center px-2 bg-yellow-500 w-20 h-8 ">
+                                        <span className="flex items-center justify-center px-2 dark:bg-yellow-500 bg-yellow-600 w-20 h-8 ">
                                             {rating !== null
                                                 ? getShortenedRating(rating)
                                                 : 'N/A'}
@@ -296,13 +299,13 @@ const page = ({ params }) => {
                                         {characters?.map((character, index) => {
                                             const { role } = character
                                             const { images, name, mal_id } = character.character
-                                            return <Link className='w-24 h-48 place-self-center rounded-xl' href={`/character/${mal_id}`} key={index}>
+                                            return <span className='w-24 h-48 place-self-center rounded-xl' key={index}>
                                                 <div className="">
                                                     <img id="charimg" className="h-36 scale-90 rounded-xl hover:scale-100 object-cover ml-[-0.5rem]" src={images?.jpg.image_url} alt="" />
                                                     <h4 className="w-[5rem] char-name text-black dark:text-white text-ellipsis overflow-hidden text-[0.74rem]">{name}</h4>
                                                     <p className=" char-role text-sm text-green-700 dark:text-green-500 text-[0.68rem]">{role}</p>
                                                 </div>
-                                            </Link>
+                                            </span>
                                         })}
                                     </div>
 
@@ -331,13 +334,13 @@ const page = ({ params }) => {
                                         {staffs?.map((staff, index) => {
                                             const { positions } = staff
                                             const { images, name, mal_id } = staff.person
-                                            return <Link className='staff-link h-40 flex items-center justify-center gap-x-2 place-self-center rounded-xl' href={`/character/${mal_id}`} key={index}>
+                                            return <span className='staff-link h-40 flex items-center justify-center gap-x-2 place-self-center rounded-xl' key={index}>
                                                 <img className="w-20 h-20 object-cover object-start rounded-full" id="staffimg" src={images?.jpg.image_url} alt="" />
                                                 <div className="staff ">
                                                     <h4 className="staff-name  text-black dark:text-white text-[0.74rem]">{name}</h4>
                                                     <p className="staff-role text-sm w-44 break-words text-green-700 dark:text-green-500 text-[0.68rem]">{positions}</p>
                                                 </div>
-                                            </Link>
+                                            </span>
                                         })}
                                     </div>
                                     {staffs.length >= 12 && staffs.length < 48 ? (

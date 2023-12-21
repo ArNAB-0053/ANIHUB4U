@@ -1,8 +1,4 @@
 #sendbtn {
-    position: absolute;
-    left: 20%;
-    bottom: 14%;
-    transform: translate(-20%, -14%);
     font-family: inherit;
     font-size: 20px;
     background: #ff0000;

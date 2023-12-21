@@ -25,7 +25,7 @@ const Drawer = () => {
 
   return (
     <>
-      <button className="drawer-container" onClick={handleOpenDrawer}>
+      <button className="drawer-container " onClick={handleOpenDrawer}>
         <Image
           src='/Images/drawer3.svg'
           width="1920"
@@ -34,6 +34,7 @@ const Drawer = () => {
           className='drawer invert-0 dark:invert'>
         </Image>
       </button>
+      
       <div className={`drawer-content dark:bg-[#484848a6] dark:text-white  ${draweropen ? 'opened' : ''} ${drawerclose ? 'closed' : ''}`}>
         <span className="closebtn bg-[#00000022] dark:bg-[#ffffff22] flex items-center justify-center gap-2 px-2 py-2" onClick={handleCloseDrawer} >
           <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-chevron-left" viewBox="0 0 16 16">

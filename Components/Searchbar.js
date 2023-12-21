@@ -29,7 +29,7 @@ const Searchbar = ({style}) => {
 
     return (
         <div>
-            <form className='scrollbar-container dark:bg-[#5e5e5e54]' onSubmit={handleSubmittion}>
+            <form className='scrollbar-container dark:bg-[#5e5e5e54] hover:bg-[#3d3d3d] dark:hover:bg-[#747474a0]' onSubmit={handleSubmittion}>
                 <div className="searchbardiv">
                     <input
                         type="search"

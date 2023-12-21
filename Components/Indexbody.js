@@ -19,8 +19,6 @@ const Indexbody = ({ starting = "https://api.jikan.moe/v4", ending, animeHeading
                 styleRounded='rounded'
                 styleMargin=''
                 btnClassname='flex items-center justify-center'
-                viewMoreClassname='viewmore flex items-center justify-center text-white flex-col'
-                viewmorePage='Populer'
                 titleClass='w-48'
                 styleinfo='w-[100%] h-[100%] rounded text-[0.5rem]'
                 titletxt='text-[0.7rem] leading-[0.65rem]'
