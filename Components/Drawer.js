@@ -4,7 +4,7 @@ import React, { useState } from 'react';
 import '../styles/drawer.css'
 import Link from 'next/link';
 
-const Drawer = () => {
+const Drawer = ({click}) => {
   const [draweropen, setDraweropen] = useState(false)
   const [drawerclose, setDrawerclose] = useState(false)
   const [isBlur, setisBlur] = useState(false)
@@ -43,17 +43,17 @@ const Drawer = () => {
           Close
         </span>
         <div className="link-container flex items-start flex-col justify-center mt-8">
-          <Link className='animes text-black dark:text-white font-semibold' href="/">Home</Link>
+          <Link onClick={click} className='animes text-black dark:text-white font-semibold' href="/">Home</Link>
           <div className="line"></div>
-          <Link className='animes text-black dark:text-white font-semibold' href="/Populer">Populer Anime</Link>
+          <Link onClick={click} className='animes text-black dark:text-white font-semibold' href="/Populer">Populer Anime</Link>
           <div className="line"></div>
-          <Link className='animes text-black dark:text-white font-semibold' href="/Airing">Airing Anime</Link>
+          <Link onClick={click} className='animes text-black dark:text-white font-semibold' href="/Airing">Airing Anime</Link>
           <div className="line"></div>
-          <Link className='animes text-black dark:text-white font-semibold' href="/Top">Top Anime</Link>
+          <Link onClick={click} className='animes text-black dark:text-white font-semibold' href="/Top">Top Anime</Link>
           <div className="line"></div>
-          <Link className='animes text-black dark:text-white font-semibold' href="/Upcoming">Upcoming Anime</Link>
+          <Link onClick={click} className='animes text-black dark:text-white font-semibold' href="/Upcoming">Upcoming Anime</Link>
           <div className="line"></div>
-          <Link className='animes text-black dark:text-white font-semibold' href="/Random">Random Anime</Link>
+          <Link onClick={click} className='animes text-black dark:text-white font-semibold' href="/Random">Random Anime</Link>
         </div>
       </div>
 

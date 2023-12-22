@@ -2,10 +2,14 @@
 import axios from "axios";
 import React, { useState } from 'react';
 import '../styles/searchbar.css';
+import Footer from "./Footer";
+import Link from "next/link";
 
-const Searchbar = ({style}) => {
+
+const Searchbar = ({style, click}) => {
     const [animeList, setAnimeList] = useState([]);
     const [search, setSearch] = useState('');
+    const [searchCon, setSearchCon] = useState(false)
 
     const handleChange = (e) => {
         setSearch(e.target.value);
@@ -13,12 +17,14 @@ const Searchbar = ({style}) => {
 
     const handleSubmittion = (e) => {
         e.preventDefault();
+        setSearchCon(true);
         setSearch("");
+        click();
     }
 
     const searchAnimeFunc = async () => {
         try {
-            const res = await axios.get(`https://api.jikan.moe/v4/anime?q=${search}&order_by=title&sort=asc&limit=10`);
+            const res = await axios.get(`https://api.jikan.moe/v4/anime?q=${search}&order_by=title&sort=asc`);
             const data = res.data;
             setAnimeList(data.data);
         } catch (error) {
@@ -27,8 +33,22 @@ const Searchbar = ({style}) => {
         }
     }
 
+    // useEffect(() => {
+    //     const handleClickOutside = (event) => {
+    //         if (searchContainerRef.current && !searchContainerRef.current.contains(event.target)) {
+    //             setSearchCon(false);
+    //         }
+    //     };
+
+    //     document.addEventListener('mousedown', handleClickOutside);
+
+    //     return () => {
+    //         document.removeEventListener('mousedown', handleClickOutside);
+    //     };
+    // }, []);
+
     return (
-        <div>
+        <div className="relative" >
             <form className='scrollbar-container dark:bg-[#5e5e5e54] hover:bg-[#3d3d3d] dark:hover:bg-[#747474a0]' onSubmit={handleSubmittion}>
                 <div className="searchbardiv">
                     <input
@@ -47,13 +67,34 @@ const Searchbar = ({style}) => {
                 </button>
             </form>
 
-            {animeList.length > 0 && (
-                <div className={`${style}`}>
-                    {animeList.map(anime => (
-                        <p>{anime.title}</p>
-                    )) }
-                </div>
-            )}
+            <div className={`relative ${style}`}>
+                {searchCon && (
+                    animeList.length > 0 && (
+                        <div className="absolute text-white top-[-10vh] left-[-18vw] px-[10vw] pt-[20vh] pb-[8vh] bg-[#f4f4f4] dark:bg-[#1d1d1f] w-[100vw] h-[108vh] overflow-y-auto overflow-x-hidden flex flex-col" id="searchCont">
+                            <div className='grid grid-rows-auto grid-cols-5  ' >
+                                {animeList.map((anime, index) => (
+                                    <a href={`/${anime.mal_id}`} onClick={click} className="flex w-[15vw] flex-col min-h-[40vh]" key={index}>
+                                        <img
+                                            key={index}
+                                            src={anime.images.jpg.large_image_url} alt={anime.title_english !== null ? anime.title_english : anime.title}
+                                            className='w-48 h-64 object-cover rounded-lg z-[9999]'
+                                            id=''
+                                        />
+                                        <p className=" w-48 whitespace-nowrap overflow-hidden overflow-ellipsis z-[9999]">{anime.title}</p>
+                                    </a>
+                                ))}
+
+                                <div className="fixed h-[10vh] left-0 top-0 z-[9999999999] dark:bg-[#00000066]" id="headerBar"></div>
+                            </div>
+                            <div className=" ml-[-11vw] w-screen bg-transparent">
+                                    <Footer />
+                                </div>
+                        </div>
+                    )
+                )}
+            </div>
+
+
         </div>
     );
 }

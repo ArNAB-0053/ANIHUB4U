@@ -31,3 +31,39 @@ input[type="search"]::-webkit-search-clear-button {
     appearance: none;
     display: none;
 }
+
+#searchCont {
+    z-index: -999;
+}
+
+#headerBar {
+    -webkit-backdrop-filter: blur(14px);
+    backdrop-filter: blur(14px);
+    width: calc(100vw - 0.6rem);
+}
+
+#searchCont {
+    --sb-track-color: none;
+    --sb-thumb-color: rgb(104, 104, 104);
+    --sb-size: 0.6rem;
+
+    scrollbar-color: var(--sb-thumb-color) var(--sb-track-color);
+}
+
+#searchCont::-webkit-scrollbar {
+    width: var(--sb-size)
+}
+
+#searchCont::-webkit-scrollbar-track {
+    background: var(--sb-track-color);
+    border-radius: 5rem;
+    z-index: 999;
+    margin-top: 3.4vh;
+    margin-bottom: 2.8rem;
+}
+
+#searchCont::-webkit-scrollbar-thumb {
+    background: var(--sb-thumb-color);
+    border-radius: 5rem;
+    z-index: 999;
+}

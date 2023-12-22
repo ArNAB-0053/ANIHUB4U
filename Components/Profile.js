@@ -16,6 +16,8 @@ const Profile = () => {
             setTimeout(() => {
                 authRef.current.showModal();
             }, 400);
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
             setisBlur(true);
         }
     };

@@ -27,15 +27,23 @@ const Header = () => {
     };
   }, []);
 
+// Function to hide Searchbar
+const [searchbarStyle, setSearchbarStyle] = useState('');
+  const handleLinkClick = () => {
+    setSearchbarStyle('hidden');
+  };
 
+  const handleSearchbarClick = () => {
+    setSearchbarStyle('');
+  };
 
   return (
     <ThemeProvider attribute="class">
       <div className={`header-con py-3 ${isFixed ? 'fixed opacity-100 text-white  dark:bg-[#00000066]' : ''}`} >
         <header className="header text-black">
           <div className="leftside flex items-center gap-8">
-            <Drawer />
-            <Link href="/">
+            <Drawer click={handleLinkClick} />
+            <Link onClick={handleLinkClick} href="/">
               <Image
                 src='/Images/logo.png'
                 width="1920"
@@ -44,15 +52,12 @@ const Header = () => {
                 className='logo'>
               </Image>
             </Link>
-            <Searchbar style="hidden"/>
+            <Searchbar style={searchbarStyle} click={handleSearchbarClick} />
           </div>
           <div className="anime-container">
-            {/* <Language/> */}
-            {/* <button > EN </button>
-            <button > JP </button> */}
-            <Link className='animes text-black dark:text-white font-semibold' id='by' href="/Populer">Popular</Link>
-            <Link className='animes text-black dark:text-white font-semibold' id='by' href="/Airing">Airing</Link>
-            <Link className='animes text-black dark:text-white font-semibold' id='by' href="/Upcoming">Upcoming</Link>
+            <Link onClick={handleLinkClick} className='animes text-black dark:text-white font-semibold' id='by' href="/Populer">Popular</Link>
+            <Link onClick={handleLinkClick} className='animes text-black dark:text-white font-semibold' id='by' href="/Airing">Airing</Link>
+            <Link onClick={handleLinkClick} className='animes text-black dark:text-white font-semibold' id='by' href="/Upcoming">Upcoming</Link>
           </div>
           <div className='flex items-center justify-end gap-4'>
             <Mode />

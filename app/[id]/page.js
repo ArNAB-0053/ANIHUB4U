@@ -9,13 +9,12 @@ import dynamic from "next/dynamic";
 
 
 const page = ({ params }) => {
-    const baseURL = "https://api.jikan.moe/v4";
     const { id } = params;
     const [loading, setLoading] = useState(false)
     const [anime, setAnime] = useState({});
     const [showMore, setShowMore] = useState(false);
 
-    const { title, synopsis, trailer, duration, aired, season, images, rank, score, scored_by, popularity, status, rating, source } = anime
+    const { synopsis, trailer, duration, aired, images, score, rating } = anime
 
     const getAnime = async (animeID) => {
         try {

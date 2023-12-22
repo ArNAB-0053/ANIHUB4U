@@ -75,7 +75,6 @@ body.drawer-opened {
 }
 
 .header-con.fixed {
-    background: #ffffff66;
     -webkit-backdrop-filter: blur(14px);
     backdrop-filter: blur(14px);
     z-index: 999999;
